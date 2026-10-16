@@ -1,0 +1,6 @@
+{
+  "format": "frg-flow",
+  "version": 1,
+  "fields": [{ "id": "phi", "line": "scalar" }],
+  "legs": ["phi", "phi", "phi", "phi"]
+}

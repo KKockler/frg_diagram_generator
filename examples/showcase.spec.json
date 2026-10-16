@@ -1,0 +1,22 @@
+{
+  "$schema": "../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "style": "thesis",
+  "rows": [
+    [
+      "\\partial_t \\Gamma^{(4)} \\propto",
+      { "diagram": "fish", "field": "quark", "internal": "pion", "regulator": "each" },
+      "+",
+      { "diagram": "box", "field": "quark", "lines": { "upper": "gluon", "lower": "gluon" }, "vertex": "bareVertex" }
+    ],
+    [
+      "\\Sigma(p) =",
+      { "diagram": "bubble", "field": "quark", "lines": { "upper": "gluon" }, "regulator": "none", "momentum": { "lower": "q" }, "labels": { "upper": "A" } },
+      "+",
+      { "diagram": "sunset", "field": "scalar", "regulator": "middle" },
+      "+",
+      { "diagram": "exchange", "field": "quark", "internal": "vector" }
+    ]
+  ]
+}

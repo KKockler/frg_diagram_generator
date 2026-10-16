@@ -1,0 +1,626 @@
+{
+ "format": "frg-diagram",
+ "version": 1,
+ "style": {
+  "name": "Thesis default",
+  "lineWidth": 2,
+  "doubleSep": 6,
+  "arrowLength": 8,
+  "arrowWidth": 6,
+  "vertexRadius": 6,
+  "regulatorRadius": 8,
+  "loopRadius": 27,
+  "legLength": 24,
+  "gridSize": 5,
+  "vertexColor": "MidnightBlueSVG",
+  "fontSize": 14,
+  "termSize": 22,
+  "rowGap": 10,
+  "colorMode": "color"
+ },
+ "fieldTypes": [
+  {
+   "id": "pion",
+   "name": "Pion",
+   "tex": "\\pi",
+   "line": "double",
+   "color": "RoyalBlue",
+   "arrows": "opposite"
+  },
+  {
+   "id": "sigma",
+   "name": "Sigma",
+   "tex": "\\sigma",
+   "line": "double",
+   "color": "BrickRed",
+   "arrows": "opposite"
+  },
+  {
+   "id": "quark",
+   "name": "Quark",
+   "tex": "q",
+   "line": "single",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "gluon",
+   "name": "Gluon",
+   "tex": "A",
+   "line": "curly",
+   "color": "BurntOrange",
+   "arrows": "none"
+  },
+  {
+   "id": "ghost",
+   "name": "Ghost",
+   "tex": "c",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "photon",
+   "name": "Photon",
+   "tex": "\\gamma",
+   "line": "wavy",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "scalar",
+   "name": "Scalar",
+   "tex": "\\phi",
+   "line": "single",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "aux",
+   "name": "Guide (dotted)",
+   "tex": "",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "none",
+   "params": {
+    "gap": 4
+   }
+  }
+ ],
+ "vertexTypes": [
+  {
+   "id": "fullVertex",
+   "name": "Full vertex",
+   "shape": "circle",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "squareVertex",
+   "name": "Square vertex",
+   "shape": "square",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "bareVertex",
+   "name": "Bare vertex",
+   "shape": "circle",
+   "scale": 0.5,
+   "fill": "Black",
+   "stroke": "none",
+   "strokeWidth": 0
+  },
+  {
+   "id": "blob",
+   "name": "Blob (Γ⁽ⁿ⁾)",
+   "shape": "circle",
+   "scale": 2.2,
+   "fill": "LightGray",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "hatched",
+   "name": "Hatched blob (1PI)",
+   "shape": "hatched",
+   "scale": 2,
+   "fill": "White",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  }
+ ],
+ "diagram": {
+  "nodes": [
+   {
+    "id": "nmufl34e5bt",
+    "kind": "external",
+    "x": 36.6058,
+    "y": 0
+   },
+   {
+    "id": "nmufl34e5bu",
+    "kind": "external",
+    "x": 108.6058,
+    "y": 0
+   },
+   {
+    "id": "nmufl34e5by",
+    "kind": "external",
+    "x": 222.348,
+    "y": 0
+   },
+   {
+    "id": "nmufl34e5bz",
+    "kind": "external",
+    "x": 294.348,
+    "y": 0
+   },
+   {
+    "id": "nmufl34e6c4",
+    "kind": "external",
+    "x": 36.6135,
+    "y": 45
+   },
+   {
+    "id": "nmufl34e6c5",
+    "kind": "external",
+    "x": 108.6135,
+    "y": 45
+   },
+   {
+    "id": "nmufl34e6c9",
+    "kind": "external",
+    "x": 222.3711,
+    "y": 45
+   },
+   {
+    "id": "nmufl34e6ca",
+    "kind": "external",
+    "x": 294.3711,
+    "y": 45
+   },
+   {
+    "id": "nmufl34e6cf",
+    "kind": "external",
+    "x": 35.75,
+    "y": 90
+   },
+   {
+    "id": "nmufl34e6cg",
+    "kind": "external",
+    "x": 107.75,
+    "y": 90
+   },
+   {
+    "id": "nmufl34e6ck",
+    "kind": "external",
+    "x": 219.7806,
+    "y": 90
+   },
+   {
+    "id": "nmufl34e6cl",
+    "kind": "external",
+    "x": 291.7806,
+    "y": 90
+   },
+   {
+    "id": "nmufl34e6cq",
+    "kind": "external",
+    "x": 42.666888010517084,
+    "y": 135
+   },
+   {
+    "id": "nmufl34e6cr",
+    "kind": "external",
+    "x": 114.66688801051708,
+    "y": 135
+   },
+   {
+    "id": "nmufl34e6cv",
+    "kind": "external",
+    "x": 235.87047602103416,
+    "y": 135
+   },
+   {
+    "id": "nmufl34e6cw",
+    "kind": "external",
+    "x": 307.87047602103416,
+    "y": 135
+   },
+   {
+    "id": "nmufl34e8d1",
+    "kind": "external",
+    "x": 35.541,
+    "y": 180
+   },
+   {
+    "id": "nmufl34e8d2",
+    "kind": "external",
+    "x": 107.541,
+    "y": 180
+   },
+   {
+    "id": "nmufl34e8d6",
+    "kind": "external",
+    "x": 219.1514,
+    "y": 180
+   },
+   {
+    "id": "nmufl34e8d7",
+    "kind": "external",
+    "x": 291.15139999999997,
+    "y": 180
+   },
+   {
+    "id": "nmufl34e9dc",
+    "kind": "fullVertex",
+    "x": 60.39236826139515,
+    "y": 264.2455
+   },
+   {
+    "id": "nmufl34e9dd",
+    "kind": "external",
+    "x": 41.1202,
+    "y": 236.72199131188987
+   },
+   {
+    "id": "nmufl34e9df",
+    "kind": "external",
+    "x": 79.66453652279029,
+    "y": 236.72199131188987
+   },
+   {
+    "id": "nmufl34e9dh",
+    "kind": "external",
+    "x": 46.90185047841854,
+    "y": 244.9790439183229
+   },
+   {
+    "id": "nmufl34e9di",
+    "kind": "external",
+    "x": 73.88288604437174,
+    "y": 244.9790439183229
+   }
+  ],
+  "edges": [
+   {
+    "id": "emufl34e5bv",
+    "from": "nmufl34e5bt",
+    "to": "nmufl34e5bu",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e5c0",
+    "from": "nmufl34e5by",
+    "to": "nmufl34e5bz",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34e5c1",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34e6c6",
+    "from": "nmufl34e6c4",
+    "to": "nmufl34e6c5",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e6cb",
+    "from": "nmufl34e6c9",
+    "to": "nmufl34e6ca",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34e6cc",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34e6ch",
+    "from": "nmufl34e6cf",
+    "to": "nmufl34e6cg",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e6cm",
+    "from": "nmufl34e6ck",
+    "to": "nmufl34e6cl",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34e6cn",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34e6cs",
+    "from": "nmufl34e6cq",
+    "to": "nmufl34e6cr",
+    "field": "gluon",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e6cx",
+    "from": "nmufl34e6cv",
+    "to": "nmufl34e6cw",
+    "field": "gluon",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34e6cy",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34e8d3",
+    "from": "nmufl34e8d1",
+    "to": "nmufl34e8d2",
+    "field": "ghost",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e8d8",
+    "from": "nmufl34e8d6",
+    "to": "nmufl34e8d7",
+    "field": "ghost",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34e8d9",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34e9de",
+    "from": "nmufl34e9dd",
+    "to": "nmufl34e9dc",
+    "field": "scalar",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e9dg",
+    "from": "nmufl34e9df",
+    "to": "nmufl34e9dc",
+    "field": "scalar",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34e9dj",
+    "from": "nmufl34e9dh",
+    "to": "nmufl34e9di",
+    "field": "aux",
+    "bend": -4.25354391832289,
+    "reversed": false,
+    "insertions": []
+   }
+  ],
+  "labels": [
+   {
+    "id": "lmufl34e5bs",
+    "tex": "G_{\\pi} =",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "lmufl34e5bx",
+    "tex": "\\quad \\partial_t R_{\\pi} =",
+    "x": 165.4769,
+    "y": 0
+   },
+   {
+    "id": "lmufl34e5c3",
+    "tex": "G_{\\sigma} =",
+    "x": 0,
+    "y": 45
+   },
+   {
+    "id": "lmufl34e6c8",
+    "tex": "\\quad \\partial_t R_{\\sigma} =",
+    "x": 165.4923,
+    "y": 45
+   },
+   {
+    "id": "lmufl34e6ce",
+    "tex": "G_{q} =",
+    "x": 0,
+    "y": 90
+   },
+   {
+    "id": "lmufl34e6cj",
+    "tex": "\\quad \\partial_t R_{q} =",
+    "x": 163.7653,
+    "y": 90
+   },
+   {
+    "id": "lmufl34e6cp",
+    "tex": "G_{A} =",
+    "x": 0,
+    "y": 135
+   },
+   {
+    "id": "lmufl34e6cu",
+    "tex": "\\quad \\partial_t R_{A} =",
+    "x": 172.93828801051708,
+    "y": 135
+   },
+   {
+    "id": "lmufl34e8d0",
+    "tex": "G_{c} =",
+    "x": 0,
+    "y": 180
+   },
+   {
+    "id": "lmufl34e8d5",
+    "tex": "\\quad \\partial_t R_{c} =",
+    "x": 163.34619999999998,
+    "y": 180
+   },
+   {
+    "id": "lmufl34e9db",
+    "tex": "\\Gamma^{(n)} =",
+    "x": 0,
+    "y": 250
+   },
+   {
+    "id": "lmufl34e9dk",
+    "tex": "n",
+    "x": 0,
+    "y": -8.4,
+    "attach": {
+     "edge": "emufl34e9dj",
+     "t": 0.5
+    }
+   }
+  ],
+  "groups": [
+   {
+    "id": "gmufl34e5bw",
+    "name": "Propagator",
+    "members": [
+     "nmufl34e5bt",
+     "nmufl34e5bu",
+     "emufl34e5bv"
+    ]
+   },
+   {
+    "id": "gmufl34e5c2",
+    "name": "Regulator insertion",
+    "members": [
+     "nmufl34e5by",
+     "nmufl34e5bz",
+     "emufl34e5c0"
+    ]
+   },
+   {
+    "id": "gmufl34e6c7",
+    "name": "Propagator",
+    "members": [
+     "nmufl34e6c4",
+     "nmufl34e6c5",
+     "emufl34e6c6"
+    ]
+   },
+   {
+    "id": "gmufl34e6cd",
+    "name": "Regulator insertion",
+    "members": [
+     "nmufl34e6c9",
+     "nmufl34e6ca",
+     "emufl34e6cb"
+    ]
+   },
+   {
+    "id": "gmufl34e6ci",
+    "name": "Propagator",
+    "members": [
+     "nmufl34e6cf",
+     "nmufl34e6cg",
+     "emufl34e6ch"
+    ]
+   },
+   {
+    "id": "gmufl34e6co",
+    "name": "Regulator insertion",
+    "members": [
+     "nmufl34e6ck",
+     "nmufl34e6cl",
+     "emufl34e6cm"
+    ]
+   },
+   {
+    "id": "gmufl34e6ct",
+    "name": "Propagator",
+    "members": [
+     "nmufl34e6cq",
+     "nmufl34e6cr",
+     "emufl34e6cs"
+    ]
+   },
+   {
+    "id": "gmufl34e6cz",
+    "name": "Regulator insertion",
+    "members": [
+     "nmufl34e6cv",
+     "nmufl34e6cw",
+     "emufl34e6cx"
+    ]
+   },
+   {
+    "id": "gmufl34e8d4",
+    "name": "Propagator",
+    "members": [
+     "nmufl34e8d1",
+     "nmufl34e8d2",
+     "emufl34e8d3"
+    ]
+   },
+   {
+    "id": "gmufl34e8da",
+    "name": "Regulator insertion",
+    "members": [
+     "nmufl34e8d6",
+     "nmufl34e8d7",
+     "emufl34e8d8"
+    ]
+   },
+   {
+    "id": "gmufl34e9dl",
+    "name": "n-point vertex Γ⁽ⁿ⁾",
+    "members": [
+     "nmufl34e9dc",
+     "nmufl34e9dd",
+     "nmufl34e9df",
+     "nmufl34e9dh",
+     "nmufl34e9di",
+     "emufl34e9de",
+     "emufl34e9dg",
+     "emufl34e9dj",
+     "lmufl34e9dk"
+    ]
+   }
+  ],
+  "regions": []
+ }
+}

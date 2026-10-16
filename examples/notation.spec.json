@@ -1,0 +1,15 @@
+{
+  "$schema": "../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "style": "thesis",
+  "rowGap": 20,
+  "rows": [
+    ["G_{\\pi} =", { "diagram": "propagator", "field": "pion" }, "\\quad \\partial_t R_{\\pi} =", { "diagram": "regulatorProp", "field": "pion" }],
+    ["G_{\\sigma} =", { "diagram": "propagator", "field": "sigma" }, "\\quad \\partial_t R_{\\sigma} =", { "diagram": "regulatorProp", "field": "sigma" }],
+    ["G_{q} =", { "diagram": "propagator", "field": "quark" }, "\\quad \\partial_t R_{q} =", { "diagram": "regulatorProp", "field": "quark" }],
+    ["G_{A} =", { "diagram": "propagator", "field": "gluon" }, "\\quad \\partial_t R_{A} =", { "diagram": "regulatorProp", "field": "gluon" }],
+    ["G_{c} =", { "diagram": "propagator", "field": "ghost" }, "\\quad \\partial_t R_{c} =", { "diagram": "regulatorProp", "field": "ghost" }],
+    ["\\Gamma^{(n)} =", { "diagram": "npoint" }]
+  ]
+}

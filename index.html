@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fRG Diagram Editor</title>
+    <meta name="description" content="Browser editor for fRG / Feynman diagram figures, with a command-line tool that draws whole one-loop flow equations (via FunKit) as TikZ, PDF, PNG or SVG. AI assistants: see llms.txt." />
+    <link rel="alternate" type="text/markdown" title="Instructions for AI assistants" href="./llms.txt" />
+  </head>
+  <body>
+    <!-- Shown to clients without JavaScript (AI assistants fetching the page); React replaces it on mount. -->
+    <div id="root">
+      <h1>fRG Diagram Editor</h1>
+      <p>A browser editor for functional renormalisation group (fRG) and Feynman diagram figures. It needs JavaScript.</p>
+      <h2>For AI assistants</h2>
+      <p>You can make figures without the browser. A single-file command-line tool (Node ≥ 20) builds them from a JSON spec, and it can draw the whole one-loop flow of any n-point function from just the fields and external legs. FunKit computes the terms and prefactors.</p>
+      <p><strong>Read the full instructions at <a href="./llms.txt">llms.txt</a> before you start.</strong></p>
+      <pre>for f in frg.mjs funkit.mjs funkit.wasm; do curl -sSfO https://kkockler.github.io/frg_diagram_generator/$f; done
+node frg.mjs flow flow.json -o flow.png -o flow.tex -o flow.frg.json</pre>
+      <ul>
+        <li><a href="./llms.txt">llms.txt</a>: workflow, flow-file and figure-spec formats</li>
+        <li><a href="./SPEC.md">SPEC.md</a>: full reference</li>
+        <li><a href="./frg-spec.schema.json">frg-spec.schema.json</a>: JSON Schema of figure specs</li>
+        <li><a href="./SKILL.md">SKILL.md</a> and <a href="./frg-diagrams.zip">frg-diagrams.zip</a>: the same instructions as a Claude skill</li>
+      </ul>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "format": "frg-flow",
+  "version": 1,
+  "fields": [
+    { "id": "sigma" },
+    { "id": "pi", "line": "pion" },
+    { "id": "q", "anti": "qb", "grassmann": true, "line": "quark" }
+  ],
+  "legs": ["pi", "pi"]
+}

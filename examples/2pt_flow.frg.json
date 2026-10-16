@@ -1,0 +1,1081 @@
+{
+ "format": "frg-diagram",
+ "version": 1,
+ "style": {
+  "name": "Thesis default",
+  "lineWidth": 2,
+  "doubleSep": 6,
+  "arrowLength": 8,
+  "arrowWidth": 6,
+  "vertexRadius": 6,
+  "regulatorRadius": 8,
+  "loopRadius": 27,
+  "legLength": 24,
+  "gridSize": 5,
+  "vertexColor": "MidnightBlueSVG",
+  "fontSize": 14,
+  "termSize": 22,
+  "rowGap": 10,
+  "colorMode": "color"
+ },
+ "fieldTypes": [
+  {
+   "id": "pion",
+   "name": "Pion",
+   "tex": "\\pi",
+   "line": "double",
+   "color": "RoyalBlue",
+   "arrows": "opposite"
+  },
+  {
+   "id": "sigma",
+   "name": "Sigma",
+   "tex": "\\sigma",
+   "line": "double",
+   "color": "BrickRed",
+   "arrows": "opposite"
+  },
+  {
+   "id": "quark",
+   "name": "Quark",
+   "tex": "q",
+   "line": "single",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "gluon",
+   "name": "Gluon",
+   "tex": "A",
+   "line": "curly",
+   "color": "BurntOrange",
+   "arrows": "none"
+  },
+  {
+   "id": "ghost",
+   "name": "Ghost",
+   "tex": "c",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "photon",
+   "name": "Photon",
+   "tex": "\\gamma",
+   "line": "wavy",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "scalar",
+   "name": "Scalar",
+   "tex": "\\phi",
+   "line": "single",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "aux",
+   "name": "Guide (dotted)",
+   "tex": "",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "none",
+   "params": {
+    "gap": 4
+   }
+  }
+ ],
+ "vertexTypes": [
+  {
+   "id": "fullVertex",
+   "name": "Full vertex",
+   "shape": "circle",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "squareVertex",
+   "name": "Square vertex",
+   "shape": "square",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "bareVertex",
+   "name": "Bare vertex",
+   "shape": "circle",
+   "scale": 0.5,
+   "fill": "Black",
+   "stroke": "none",
+   "strokeWidth": 0
+  },
+  {
+   "id": "blob",
+   "name": "Blob (Γ⁽ⁿ⁾)",
+   "shape": "circle",
+   "scale": 2.2,
+   "fill": "LightGray",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "hatched",
+   "name": "Hatched blob (1PI)",
+   "shape": "hatched",
+   "scale": 2,
+   "fill": "White",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  }
+ ],
+ "diagram": {
+  "nodes": [
+   {
+    "id": "nmufl34dr8i",
+    "kind": "fullVertex",
+    "x": 107.7471,
+    "y": 28.200000000000003
+   },
+   {
+    "id": "nmufl34dr8l",
+    "kind": "external",
+    "x": 70.2471,
+    "y": 28.200000000000006
+   },
+   {
+    "id": "nmufl34dr8n",
+    "kind": "external",
+    "x": 145.2471,
+    "y": 28.200000000000003
+   },
+   {
+    "id": "nmufl34dr8r",
+    "kind": "fullVertex",
+    "x": 208.36309999999997,
+    "y": 1.3500000000000048
+   },
+   {
+    "id": "nmufl34dr8s",
+    "kind": "fullVertex",
+    "x": 262.3631,
+    "y": 1.3500000000000014
+   },
+   {
+    "id": "nmufl34dr8w",
+    "kind": "external",
+    "x": 184.36309999999997,
+    "y": 1.3500000000000076
+   },
+   {
+    "id": "nmufl34dr8y",
+    "kind": "external",
+    "x": 286.3631,
+    "y": 1.3500000000000014
+   },
+   {
+    "id": "nmufl34dr92",
+    "kind": "fullVertex",
+    "x": 349.47909999999996,
+    "y": 1.3500000000000048
+   },
+   {
+    "id": "nmufl34dr93",
+    "kind": "fullVertex",
+    "x": 403.47909999999996,
+    "y": 1.3500000000000014
+   },
+   {
+    "id": "nmufl34dr97",
+    "kind": "external",
+    "x": 325.47909999999996,
+    "y": 1.3500000000000076
+   },
+   {
+    "id": "nmufl34dr99",
+    "kind": "external",
+    "x": 427.47909999999996,
+    "y": 1.3500000000000014
+   },
+   {
+    "id": "nmufl34dr9d",
+    "kind": "fullVertex",
+    "x": 501.59509999999995,
+    "y": 2.8500000000000045
+   },
+   {
+    "id": "nmufl34dr9e",
+    "kind": "fullVertex",
+    "x": 555.5951,
+    "y": 2.8500000000000014
+   },
+   {
+    "id": "nmufl34dr9i",
+    "kind": "external",
+    "x": 477.59509999999995,
+    "y": 2.8500000000000076
+   },
+   {
+    "id": "nmufl34dr9k",
+    "kind": "external",
+    "x": 579.5951,
+    "y": 2.8500000000000014
+   },
+   {
+    "id": "nmufl34dt9o",
+    "kind": "fullVertex",
+    "x": 53.56029999999998,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dt9p",
+    "kind": "fullVertex",
+    "x": 107.56029999999998,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dt9t",
+    "kind": "external",
+    "x": 29.560299999999984,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dt9v",
+    "kind": "external",
+    "x": 131.56029999999998,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dt9z",
+    "kind": "fullVertex",
+    "x": 194.67629999999997,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dta0",
+    "kind": "fullVertex",
+    "x": 248.67629999999994,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dta4",
+    "kind": "external",
+    "x": 170.67629999999997,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dta6",
+    "kind": "external",
+    "x": 272.6762999999999,
+    "y": 121.35
+   },
+   {
+    "id": "nmufl34dtaa",
+    "kind": "fullVertex",
+    "x": 346.7922999999999,
+    "y": 122.85
+   },
+   {
+    "id": "nmufl34dtab",
+    "kind": "fullVertex",
+    "x": 400.7922999999999,
+    "y": 122.85
+   },
+   {
+    "id": "nmufl34dtaf",
+    "kind": "external",
+    "x": 322.7922999999999,
+    "y": 122.85
+   },
+   {
+    "id": "nmufl34dtah",
+    "kind": "external",
+    "x": 424.7922999999999,
+    "y": 122.85
+   },
+   {
+    "id": "nmufl34dual",
+    "kind": "fullVertex",
+    "x": 53.56029999999998,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34duam",
+    "kind": "fullVertex",
+    "x": 107.56029999999998,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34duaq",
+    "kind": "external",
+    "x": 29.560299999999984,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34duas",
+    "kind": "external",
+    "x": 131.56029999999998,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34duaw",
+    "kind": "fullVertex",
+    "x": 194.67629999999997,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34duax",
+    "kind": "fullVertex",
+    "x": 248.67629999999994,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dub1",
+    "kind": "external",
+    "x": 170.67629999999997,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dub3",
+    "kind": "external",
+    "x": 272.6762999999999,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dub7",
+    "kind": "fullVertex",
+    "x": 335.7922999999999,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34dub8",
+    "kind": "fullVertex",
+    "x": 389.7922999999999,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34dubc",
+    "kind": "external",
+    "x": 311.7922999999999,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34dube",
+    "kind": "external",
+    "x": 413.7922999999999,
+    "y": 241.35
+   },
+   {
+    "id": "nmufl34dubi",
+    "kind": "fullVertex",
+    "x": 476.9082999999999,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dubj",
+    "kind": "fullVertex",
+    "x": 530.9082999999999,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dubn",
+    "kind": "external",
+    "x": 452.9082999999999,
+    "y": 242.85
+   },
+   {
+    "id": "nmufl34dubp",
+    "kind": "external",
+    "x": 554.9082999999999,
+    "y": 242.85
+   }
+  ],
+  "edges": [
+   {
+    "id": "emufl34dr8j",
+    "from": "nmufl34dr8i",
+    "to": "nmufl34dr8i",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dr8k",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ],
+    "loop": {
+     "radius": 27,
+     "angle": -1.5707963267948966
+    }
+   },
+   {
+    "id": "emufl34dr8m",
+    "from": "nmufl34dr8l",
+    "to": "nmufl34dr8i",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr8o",
+    "from": "nmufl34dr8i",
+    "to": "nmufl34dr8n",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr8t",
+    "from": "nmufl34dr8r",
+    "to": "nmufl34dr8s",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dr8v",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dr8u",
+    "from": "nmufl34dr8s",
+    "to": "nmufl34dr8r",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr8x",
+    "from": "nmufl34dr8w",
+    "to": "nmufl34dr8r",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr8z",
+    "from": "nmufl34dr8s",
+    "to": "nmufl34dr8y",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr94",
+    "from": "nmufl34dr92",
+    "to": "nmufl34dr93",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dr96",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dr95",
+    "from": "nmufl34dr93",
+    "to": "nmufl34dr92",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr98",
+    "from": "nmufl34dr97",
+    "to": "nmufl34dr92",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr9a",
+    "from": "nmufl34dr93",
+    "to": "nmufl34dr99",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr9f",
+    "from": "nmufl34dr9d",
+    "to": "nmufl34dr9e",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dr9h",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dr9g",
+    "from": "nmufl34dr9e",
+    "to": "nmufl34dr9d",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr9j",
+    "from": "nmufl34dr9i",
+    "to": "nmufl34dr9d",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dr9l",
+    "from": "nmufl34dr9e",
+    "to": "nmufl34dr9k",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dt9q",
+    "from": "nmufl34dt9o",
+    "to": "nmufl34dt9p",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dt9s",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dt9r",
+    "from": "nmufl34dt9p",
+    "to": "nmufl34dt9o",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dt9u",
+    "from": "nmufl34dt9t",
+    "to": "nmufl34dt9o",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dt9w",
+    "from": "nmufl34dt9p",
+    "to": "nmufl34dt9v",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dta1",
+    "from": "nmufl34dt9z",
+    "to": "nmufl34dta0",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dta3",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dta2",
+    "from": "nmufl34dta0",
+    "to": "nmufl34dt9z",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dta5",
+    "from": "nmufl34dta4",
+    "to": "nmufl34dt9z",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dta7",
+    "from": "nmufl34dta0",
+    "to": "nmufl34dta6",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dtac",
+    "from": "nmufl34dtaa",
+    "to": "nmufl34dtab",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dtae",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dtad",
+    "from": "nmufl34dtab",
+    "to": "nmufl34dtaa",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dtag",
+    "from": "nmufl34dtaf",
+    "to": "nmufl34dtaa",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dtai",
+    "from": "nmufl34dtab",
+    "to": "nmufl34dtah",
+    "field": "sigma",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34duan",
+    "from": "nmufl34dual",
+    "to": "nmufl34duam",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34duap",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34duao",
+    "from": "nmufl34duam",
+    "to": "nmufl34dual",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34duar",
+    "from": "nmufl34duaq",
+    "to": "nmufl34dual",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34duat",
+    "from": "nmufl34duam",
+    "to": "nmufl34duas",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34duay",
+    "from": "nmufl34duaw",
+    "to": "nmufl34duax",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dub0",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34duaz",
+    "from": "nmufl34duax",
+    "to": "nmufl34duaw",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dub2",
+    "from": "nmufl34dub1",
+    "to": "nmufl34duaw",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dub4",
+    "from": "nmufl34duax",
+    "to": "nmufl34dub3",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dub9",
+    "from": "nmufl34dub7",
+    "to": "nmufl34dub8",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dubb",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34duba",
+    "from": "nmufl34dub8",
+    "to": "nmufl34dub7",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dubd",
+    "from": "nmufl34dubc",
+    "to": "nmufl34dub7",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dubf",
+    "from": "nmufl34dub8",
+    "to": "nmufl34dube",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dubk",
+    "from": "nmufl34dubi",
+    "to": "nmufl34dubj",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imufl34dubm",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emufl34dubl",
+    "from": "nmufl34dubj",
+    "to": "nmufl34dubi",
+    "field": "quark",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dubo",
+    "from": "nmufl34dubn",
+    "to": "nmufl34dubi",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emufl34dubq",
+    "from": "nmufl34dubj",
+    "to": "nmufl34dubp",
+    "field": "quark",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   }
+  ],
+  "labels": [
+   {
+    "id": "lmufl34dr8h",
+    "tex": "\\partial_t\\Gamma^{(2)}_{\\pi} \\propto -\\frac{1}{2}",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "lmufl34dr8q",
+    "tex": "+",
+    "x": 164.80509999999998,
+    "y": 0
+   },
+   {
+    "id": "lmufl34dr91",
+    "tex": "+",
+    "x": 305.92109999999997,
+    "y": 0
+   },
+   {
+    "id": "lmufl34dr9c",
+    "tex": "-2",
+    "x": 452.53709999999995,
+    "y": 0
+   },
+   {
+    "id": "lmufl34dt9n",
+    "tex": "\\partial_t\\Gamma^{(2)}_{\\sigma} \\propto",
+    "x": -20.34340000000001,
+    "y": 120
+   },
+   {
+    "id": "lmufl34dt9y",
+    "tex": "+",
+    "x": 151.11829999999998,
+    "y": 120
+   },
+   {
+    "id": "lmufl34dta9",
+    "tex": "-2",
+    "x": 297.7342999999999,
+    "y": 120
+   },
+   {
+    "id": "lmufl34duak",
+    "tex": "\\partial_t\\Gamma^{(2)}_{q} \\propto",
+    "x": -20.34340000000001,
+    "y": 240
+   },
+   {
+    "id": "lmufl34duav",
+    "tex": "+",
+    "x": 151.11829999999998,
+    "y": 240
+   },
+   {
+    "id": "lmufl34dub6",
+    "tex": "+",
+    "x": 292.2342999999999,
+    "y": 240
+   },
+   {
+    "id": "lmufl34dubh",
+    "tex": "+",
+    "x": 433.3502999999999,
+    "y": 240
+   }
+  ],
+  "groups": [
+   {
+    "id": "gmufl34dr8p",
+    "name": "Tadpole",
+    "members": [
+     "nmufl34dr8i",
+     "nmufl34dr8l",
+     "nmufl34dr8n",
+     "emufl34dr8j",
+     "emufl34dr8m",
+     "emufl34dr8o"
+    ]
+   },
+   {
+    "id": "gmufl34dr90",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dr8r",
+     "nmufl34dr8s",
+     "nmufl34dr8w",
+     "nmufl34dr8y",
+     "emufl34dr8t",
+     "emufl34dr8u",
+     "emufl34dr8x",
+     "emufl34dr8z"
+    ]
+   },
+   {
+    "id": "gmufl34dr9b",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dr92",
+     "nmufl34dr93",
+     "nmufl34dr97",
+     "nmufl34dr99",
+     "emufl34dr94",
+     "emufl34dr95",
+     "emufl34dr98",
+     "emufl34dr9a"
+    ]
+   },
+   {
+    "id": "gmufl34dr9m",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dr9d",
+     "nmufl34dr9e",
+     "nmufl34dr9i",
+     "nmufl34dr9k",
+     "emufl34dr9f",
+     "emufl34dr9g",
+     "emufl34dr9j",
+     "emufl34dr9l"
+    ]
+   },
+   {
+    "id": "gmufl34dt9x",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dt9o",
+     "nmufl34dt9p",
+     "nmufl34dt9t",
+     "nmufl34dt9v",
+     "emufl34dt9q",
+     "emufl34dt9r",
+     "emufl34dt9u",
+     "emufl34dt9w"
+    ]
+   },
+   {
+    "id": "gmufl34dta8",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dt9z",
+     "nmufl34dta0",
+     "nmufl34dta4",
+     "nmufl34dta6",
+     "emufl34dta1",
+     "emufl34dta2",
+     "emufl34dta5",
+     "emufl34dta7"
+    ]
+   },
+   {
+    "id": "gmufl34dtaj",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dtaa",
+     "nmufl34dtab",
+     "nmufl34dtaf",
+     "nmufl34dtah",
+     "emufl34dtac",
+     "emufl34dtad",
+     "emufl34dtag",
+     "emufl34dtai"
+    ]
+   },
+   {
+    "id": "gmufl34duau",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dual",
+     "nmufl34duam",
+     "nmufl34duaq",
+     "nmufl34duas",
+     "emufl34duan",
+     "emufl34duao",
+     "emufl34duar",
+     "emufl34duat"
+    ]
+   },
+   {
+    "id": "gmufl34dub5",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34duaw",
+     "nmufl34duax",
+     "nmufl34dub1",
+     "nmufl34dub3",
+     "emufl34duay",
+     "emufl34duaz",
+     "emufl34dub2",
+     "emufl34dub4"
+    ]
+   },
+   {
+    "id": "gmufl34dubg",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dub7",
+     "nmufl34dub8",
+     "nmufl34dubc",
+     "nmufl34dube",
+     "emufl34dub9",
+     "emufl34duba",
+     "emufl34dubd",
+     "emufl34dubf"
+    ]
+   },
+   {
+    "id": "gmufl34dubr",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmufl34dubi",
+     "nmufl34dubj",
+     "nmufl34dubn",
+     "nmufl34dubp",
+     "emufl34dubk",
+     "emufl34dubl",
+     "emufl34dubo",
+     "emufl34dubq"
+    ]
+   }
+  ],
+  "regions": []
+ }
+}

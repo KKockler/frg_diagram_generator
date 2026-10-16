@@ -1,0 +1,516 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "frg-spec.schema.json",
+  "title": "fRG diagram figure spec",
+  "description": "A figure as rows of TeX terms and pre-built Feynman diagrams. Build it with `frg build spec.json -o figure.tex`.",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "rows"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "format": {
+      "const": "frg-spec"
+    },
+    "version": {
+      "const": 1
+    },
+    "style": {
+      "description": "Style preset name, or style-sheet overrides (optionally based on a preset).",
+      "oneOf": [
+        {
+          "enum": [
+            "fqcd",
+            "thesis",
+            "journal",
+            "grayscale",
+            "talk"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "preset": {
+              "enum": [
+                "fqcd",
+                "thesis",
+                "journal",
+                "grayscale",
+                "talk"
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "lineWidth": {
+              "type": "number"
+            },
+            "doubleSep": {
+              "type": "number"
+            },
+            "arrowLength": {
+              "type": "number"
+            },
+            "arrowWidth": {
+              "type": "number"
+            },
+            "vertexRadius": {
+              "type": "number"
+            },
+            "regulatorRadius": {
+              "type": "number"
+            },
+            "loopRadius": {
+              "type": "number"
+            },
+            "legLength": {
+              "type": "number"
+            },
+            "gridSize": {
+              "type": "number"
+            },
+            "vertexColor": {
+              "type": "string"
+            },
+            "fontSize": {
+              "type": "number"
+            },
+            "termSize": {
+              "type": "number"
+            },
+            "rowGap": {
+              "type": "number"
+            },
+            "colorMode": {
+              "enum": [
+                "color",
+                "grayscale",
+                "black"
+              ]
+            },
+            "arrowOutline": {
+              "type": "string"
+            },
+            "regulatorFill": {
+              "type": "string"
+            },
+            "regulatorStroke": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "fields": {
+      "type": "array",
+      "description": "Extra line types, or overrides of built-in ones (same id).",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "tex",
+          "line",
+          "color",
+          "arrows"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tex": {
+            "type": "string"
+          },
+          "line": {
+            "enum": [
+              "single",
+              "double",
+              "dashed",
+              "dotted",
+              "wavy",
+              "curly"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "description": "xcolor dvipsnames name (RoyalBlue, BrickRed, …) or #rrggbb."
+          },
+          "arrows": {
+            "enum": [
+              "none",
+              "forward",
+              "opposite"
+            ]
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "vertexTypes": {
+      "type": "array",
+      "description": "Extra vertex types, or overrides of built-in ones (same id).",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "shape",
+          "scale",
+          "fill",
+          "stroke",
+          "strokeWidth"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "shape": {
+            "enum": [
+              "circle",
+              "square",
+              "diamond",
+              "triangle",
+              "hatched",
+              "cross"
+            ]
+          },
+          "scale": {
+            "type": "number"
+          },
+          "fill": {
+            "type": "string"
+          },
+          "stroke": {
+            "type": "string"
+          },
+          "strokeWidth": {
+            "type": "number"
+          },
+          "tex": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "regulatorKind": {
+      "enum": [
+        "regulator",
+        "flowRegulator"
+      ],
+      "description": "Default regulator kind of every diagram. Regulator insertion: \"regulator\" = ∂ₜR (crossed circle), \"flowRegulator\" = (∂ₜ + 2δΦ̇/δΦ)R of the generalised flow equation with flowing fields (crossed pentagon)."
+    },
+    "rowGap": {
+      "type": "number",
+      "description": "Vertical gap between rows in pt (default 30)."
+    },
+    "align": {
+      "enum": [
+        "left",
+        "center"
+      ],
+      "description": "Horizontal alignment of rows (default left)."
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Equation rows, top to bottom. Items in a row are laid out left to right on a common centre line.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/item"
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "items"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/item"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "item": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "TeX term (math mode), e.g. \"+\", \"-\\frac{1}{2}\", \"\\partial_t\\Gamma^{(2)} =\"."
+        },
+        {
+          "type": "object",
+          "required": [
+            "tex"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "tex": {
+              "type": "string"
+            },
+            "size": {
+              "type": "number"
+            },
+            "color": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "$ref": "#/$defs/diagram"
+        }
+      ]
+    },
+    "diagram": {
+      "type": "object",
+      "required": [
+        "diagram"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "diagram": {
+          "enum": [
+            "propagator",
+            "regulatorProp",
+            "wetterich",
+            "tadpole",
+            "bubble",
+            "fish",
+            "triangle",
+            "box",
+            "sunset",
+            "vertex4",
+            "npoint",
+            "exchange",
+            "ring"
+          ],
+          "description": "propagator: Propagator [lines: line]; regulatorProp: Regulator insertion [lines: line]; wetterich: Wetterich loop (one-loop flow) [lines: loop]; tadpole: Tadpole [lines: loop]; bubble: Polarisation / self-energy [lines: upper, lower]; fish: Fish (4-point) [lines: upper, lower]; triangle: Triangle (3-point) [lines: left, right, lower]; box: Box (4-point) [lines: left, upper, right, lower]; sunset: Sunset (2-loop) [lines: upper, middle, lower]; vertex4: 4-point vertex; npoint: n-point vertex Γ⁽ⁿ⁾; exchange: Boson exchange (4-point) [lines: middle]; ring: One-loop ring (vertices with given legs), set by \"vertices\" [lines: 0, 1, …; line i runs from vertex i to i + 1]"
+        },
+        "field": {
+          "type": "string",
+          "description": "Field of every line (default \"scalar\").",
+          "examples": [
+            "pion",
+            "sigma",
+            "quark",
+            "gluon",
+            "ghost",
+            "photon",
+            "scalar",
+            "aux",
+            "vector",
+            "diquark",
+            "nucleon"
+          ]
+        },
+        "legs": {
+          "type": "string",
+          "description": "Field of the external legs.",
+          "examples": [
+            "pion",
+            "sigma",
+            "quark",
+            "gluon",
+            "ghost",
+            "photon",
+            "scalar",
+            "aux",
+            "vector",
+            "diquark",
+            "nucleon"
+          ]
+        },
+        "internal": {
+          "type": "string",
+          "description": "Field of all internal lines.",
+          "examples": [
+            "pion",
+            "sigma",
+            "quark",
+            "gluon",
+            "ghost",
+            "photon",
+            "scalar",
+            "aux",
+            "vector",
+            "diquark",
+            "nucleon"
+          ]
+        },
+        "lines": {
+          "type": "object",
+          "description": "Field per internal line. Keys are line slots of the diagram (line, loop, upper, lower, left, right, middle; see \"frg list\") or line indices.",
+          "additionalProperties": {
+            "type": "string",
+            "description": "Field (line type) id. Built in: pion, sigma, quark, gluon, ghost, photon, scalar, aux, vector, diquark, nucleon; or one defined under \"fields\".",
+            "examples": [
+              "pion",
+              "sigma",
+              "quark",
+              "gluon",
+              "ghost",
+              "photon",
+              "scalar",
+              "aux",
+              "vector",
+              "diquark",
+              "nucleon"
+            ]
+          }
+        },
+        "regulator": {
+          "description": "Line(s) carrying the regulator insertion; \"none\", or \"each\" for the sum of copies with the regulator on each internal line.",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "regulatorKind": {
+          "enum": [
+            "regulator",
+            "flowRegulator"
+          ],
+          "description": "Regulator insertion: \"regulator\" = ∂ₜR (crossed circle), \"flowRegulator\" = (∂ₜ + 2δΦ̇/δΦ)R of the generalised flow equation with flowing fields (crossed pentagon)."
+        },
+        "vertex": {
+          "type": "string",
+          "description": "Vertex type of the internal vertices: fullVertex, squareVertex, bareVertex, blob, hatched, counterterm, gammaN.",
+          "examples": [
+            "fullVertex",
+            "squareVertex",
+            "bareVertex",
+            "blob",
+            "hatched",
+            "counterterm",
+            "gammaN"
+          ]
+        },
+        "reverse": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Line slots (or \"legs\") whose arrows are flipped."
+        },
+        "labels": {
+          "type": "object",
+          "description": "TeX label beside a line. Keys are line slots of the diagram (line, loop, upper, lower, left, right, middle; see \"frg list\") or line indices.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "momentum": {
+          "type": "object",
+          "description": "Momentum arrow with a TeX label beside a line. Keys are line slots of the diagram (line, loop, upper, lower, left, right, middle; see \"frg list\") or line indices.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "vertices": {
+          "type": "array",
+          "minItems": 1,
+          "description": "External legs per internal vertex, in the diagram's vertex order: a leg count, or one entry per leg. Required for \"ring\"; on other diagrams the counts must match.",
+          "items": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 0
+              },
+              {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "Field (line type) id. Built in: pion, sigma, quark, gluon, ghost, photon, scalar, aux, vector, diquark, nucleon; or one defined under \"fields\".",
+                      "examples": [
+                        "pion",
+                        "sigma",
+                        "quark",
+                        "gluon",
+                        "ghost",
+                        "photon",
+                        "scalar",
+                        "aux",
+                        "vector",
+                        "diquark",
+                        "nucleon"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "field"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "field": {
+                          "type": "string",
+                          "description": "Field (line type) id. Built in: pion, sigma, quark, gluon, ghost, photon, scalar, aux, vector, diquark, nucleon; or one defined under \"fields\".",
+                          "examples": [
+                            "pion",
+                            "sigma",
+                            "quark",
+                            "gluon",
+                            "ghost",
+                            "photon",
+                            "scalar",
+                            "aux",
+                            "vector",
+                            "diquark",
+                            "nucleon"
+                          ]
+                        },
+                        "dir": {
+                          "enum": [
+                            "in",
+                            "out"
+                          ],
+                          "description": "Arrow into or out of the vertex."
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

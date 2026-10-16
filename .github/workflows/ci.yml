@@ -1,0 +1,119 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+
+  # Export every pre-built diagram as standalone TikZ ...
+  tikz-export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: TIKZ_OUT=build/tikz npx vitest run src/export/tikz.test.ts
+      - run: EXAMPLES_OUT=build/tikz npx vitest run src/model/examples.test.ts
+      - uses: actions/upload-artifact@v4
+        with: { name: tikz-export, path: build/tikz, retention-days: 7 }
+
+  # FunKit's C++ engine as WebAssembly (dist-wasm/funkit.mjs + .wasm), from the commit pinned in
+  # funkit.json. The editor's Flow… dialog and `frg flow` run it.
+  funkit-wasm:
+    runs-on: ubuntu-latest
+    container: emscripten/emsdk:4.0.10
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh scripts/build-funkit-wasm.sh
+      - uses: actions/upload-artifact@v4
+        with: { name: funkit-wasm, path: dist-wasm, retention-days: 7 }
+
+  # Build the command-line tool and run it on the example specs and flows; check that the
+  # WebAssembly FunKit reproduces the native results the flow tests are based on.
+  cli:
+    runs-on: ubuntu-latest
+    needs: funkit-wasm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with: { name: funkit-wasm, path: dist-wasm }
+      - run: npm run build:cli
+      - run: npx vitest run src/flow/wasm.test.ts
+      - run: |
+          mkdir -p build/tikz
+          for f in examples/*.spec.json; do node dist-cli/frg.mjs build "$f" -o "build/tikz/spec_$(basename "$f" .spec.json).tex" || exit 1; done
+          for f in examples/*.flow.json; do node dist-cli/frg.mjs flow "$f" -o "build/tikz/flow_$(basename "$f" .flow.json).tex" || exit 1; done
+      - uses: actions/upload-artifact@v4
+        with: { name: cli, path: build/tikz, retention-days: 7 }
+
+  # ... and check that LaTeX compiles all of them.
+  tikz-compile:
+    runs-on: ubuntu-latest
+    needs: [tikz-export, cli]
+    container: texlive/texlive:latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { pattern: '{tikz-export,cli}', path: build/tikz, merge-multiple: true }
+      - working-directory: build/tikz
+        run: for f in *.tex; do pdflatex -interaction=nonstopmode -halt-on-error "$f" > /dev/null || { echo "FAILED $f"; exit 1; }; echo "ok $f"; done
+      - uses: actions/upload-artifact@v4
+        with: { name: tikz-pdf, path: build/tikz/*.pdf, retention-days: 7 }
+
+  pages-build:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    needs: [test, cli, tikz-compile]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with: { name: funkit-wasm, path: dist-wasm }
+      - run: npm run build
+      - run: npm run build:cli
+      - run: |
+          rm -rf public && mv dist public
+          # The CLI and the spec schema, downloadable next to the editor. funkit.mjs and funkit.wasm
+          # (from the funkit-wasm job) are already there: vite copies dist-wasm/ into the build.
+          cp dist-cli/frg.mjs frg-spec.schema.json docs/SPEC.md public/
+          test -f public/funkit.wasm
+          # The Claude skill: SKILL.md for Claude Code (~/.claude/skills/frg-diagrams/), the zip for claude.ai.
+          cp skills/frg-diagrams/SKILL.md public/
+          # llms.txt (linked from index.html for assistants that only get the URL): the skill without its frontmatter.
+          awk 'n >= 2; /^---$/ { n++ }' skills/frg-diagrams/SKILL.md > public/llms.txt
+          grep -q '^# fRG diagrams' public/llms.txt
+          (cd skills && python3 -m zipfile -c ../public/frg-diagrams.zip frg-diagrams)
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: public }
+
+  pages-deploy:
+    needs: pages-build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

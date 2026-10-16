@@ -1,0 +1,37 @@
+{
+  "$schema": "../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "style": "thesis",
+  "rowGap": 50,
+  "rows": [
+    [
+      "\\partial_t\\Gamma^{(2)}_{\\pi} \\propto -\\frac{1}{2}",
+      { "diagram": "tadpole", "field": "pion" },
+      "+",
+      { "diagram": "bubble", "field": "pion", "lines": { "upper": "sigma", "lower": "pion" } },
+      "+",
+      { "diagram": "bubble", "field": "pion", "lines": { "upper": "pion", "lower": "sigma" } },
+      "-2",
+      { "diagram": "bubble", "field": "pion", "internal": "quark" }
+    ],
+    [
+      "\\partial_t\\Gamma^{(2)}_{\\sigma} \\propto",
+      { "diagram": "bubble", "field": "sigma", "internal": "pion" },
+      "+",
+      { "diagram": "bubble", "field": "sigma" },
+      "-2",
+      { "diagram": "bubble", "field": "sigma", "internal": "quark" }
+    ],
+    [
+      "\\partial_t\\Gamma^{(2)}_{q} \\propto",
+      { "diagram": "bubble", "field": "quark", "lines": { "lower": "pion" } },
+      "+",
+      { "diagram": "bubble", "field": "quark", "lines": { "upper": "pion" } },
+      "+",
+      { "diagram": "bubble", "field": "quark", "lines": { "lower": "sigma" } },
+      "+",
+      { "diagram": "bubble", "field": "quark", "lines": { "upper": "sigma" } }
+    ]
+  ]
+}

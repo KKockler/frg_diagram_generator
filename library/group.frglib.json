@@ -1,0 +1,57 @@
+{
+  "format": "frg-library",
+  "version": 1,
+  "name": "Group library",
+  "fields": [
+    {
+      "id": "vector",
+      "name": "Vector meson (ρ, ω)",
+      "tex": "\\rho",
+      "line": "wavy",
+      "color": "ForestGreen",
+      "arrows": "none"
+    },
+    {
+      "id": "diquark",
+      "name": "Diquark",
+      "tex": "\\Delta",
+      "line": "double",
+      "color": "Purple",
+      "arrows": "forward"
+    },
+    {
+      "id": "nucleon",
+      "name": "Nucleon",
+      "tex": "N",
+      "line": "double",
+      "color": "Black",
+      "arrows": "forward",
+      "params": {
+        "sep": 4
+      }
+    }
+  ],
+  "styles": [],
+  "templates": [],
+  "vertexTypes": [
+    {
+      "id": "counterterm",
+      "name": "Counterterm (⊗ vertex)",
+      "shape": "cross",
+      "scale": 1.1,
+      "fill": "none",
+      "stroke": "Black",
+      "strokeWidth": 1
+    },
+    {
+      "id": "gammaN",
+      "name": "Γ⁽ⁿ⁾ blob with n",
+      "shape": "circle",
+      "scale": 2.2,
+      "fill": "White",
+      "stroke": "Black",
+      "strokeWidth": 0.6,
+      "tex": "n"
+    }
+  ]
+}
