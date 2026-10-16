@@ -2,6 +2,7 @@
   "name": "frg-diagram-generator",
   "private": true,
   "version": "0.1.0",
+  "license": "GPL-3.0-or-later",
   "type": "module",
   "bin": {
     "frg": "dist-cli/frg.mjs"

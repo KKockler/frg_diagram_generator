@@ -218,3 +218,8 @@ render these same primitives, so the preview is exactly what ends up in the pape
   call `registerVertexShape` in `src/styles/nodeKinds.ts`; for a new insertion kind, call
   `registerInsertionKind` in the same file.
 - **New pre-built diagram:** add a `Stamp` to `src/model/stamps.ts`, using the `Builder` helpers.
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0 or later](LICENSE). The
+FunKit WebAssembly build it ships is also GPL-3.0-or-later.
