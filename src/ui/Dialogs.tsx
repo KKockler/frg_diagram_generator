@@ -354,7 +354,8 @@ export function AboutDialog() {
       <section className="about">
         <p>
           A browser editor for the diagrams in fRG papers. The <code>frg</code> command (<a href="frg.mjs">frg.mjs</a>, Node ≥ 20) builds figures from JSON
-          specs, and <code>frg flow</code> draws whole flow equations.
+          specs, and <code>frg flow</code> draws whole flow equations. Instructions for the command line and for AI assistants:{' '}
+          <a href="llms.txt">llms.txt</a>.
         </p>
         <h3>How this was made</h3>
         <p>
