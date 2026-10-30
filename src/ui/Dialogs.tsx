@@ -353,6 +353,13 @@ export function AboutDialog() {
     <Modal title="About" onClose={() => set({ dialog: null })}>
       <section className="about">
         <p>
+          New here? The{' '}
+          <a href="tutorial.html" target="_blank" rel="noopener">
+            <strong>tutorial</strong>
+          </a>{' '}
+          builds a flow-equation figure step by step, from placing diagrams to the export for your paper.
+        </p>
+        <p>
           A browser editor for the diagrams in fRG papers. The <code>frg</code> command (<a href="frg.mjs">frg.mjs</a>, Node ≥ 20) builds figures from JSON
           specs, and <code>frg flow</code> draws whole flow equations. Instructions for the command line and for AI assistants:{' '}
           <a href="llms.txt">llms.txt</a>.

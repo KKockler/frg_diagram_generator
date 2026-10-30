@@ -1,0 +1,8 @@
+{
+  "$schema": "../../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "rows": [
+    [{ "diagram": "bubble", "field": "pion", "lines": { "upper": "sigma" }, "regulator": "each" }]
+  ]
+}

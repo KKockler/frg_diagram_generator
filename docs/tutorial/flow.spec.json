@@ -1,0 +1,73 @@
+{
+  "format": "frg-spec",
+  "version": 1,
+  "rows": [
+    [
+      "\\partial_t\\Gamma^{(2)}_{\\pi\\pi} =",
+      "-\\frac{1}{2}",
+      {
+        "diagram": "tadpole",
+        "legs": "pion",
+        "internal": "sigma",
+        "regulator": "0"
+      },
+      "-\\frac{1}{2}",
+      {
+        "diagram": "tadpole",
+        "legs": "pion",
+        "internal": "pion",
+        "regulator": "0"
+      },
+      "-",
+      {
+        "diagram": "tadpole",
+        "legs": "pion",
+        "internal": "quark",
+        "regulator": "0"
+      },
+      "+",
+      {
+        "diagram": "bubble",
+        "legs": "pion",
+        "internal": "sigma",
+        "regulator": "0"
+      }
+    ],
+    [
+      "+",
+      {
+        "diagram": "bubble",
+        "legs": "pion",
+        "lines": {
+          "0": "sigma",
+          "1": "pion"
+        },
+        "regulator": "0"
+      },
+      "+",
+      {
+        "diagram": "bubble",
+        "legs": "pion",
+        "lines": {
+          "0": "pion",
+          "1": "sigma"
+        },
+        "regulator": "0"
+      },
+      "+",
+      {
+        "diagram": "bubble",
+        "legs": "pion",
+        "internal": "pion",
+        "regulator": "0"
+      },
+      "-2",
+      {
+        "diagram": "bubble",
+        "legs": "pion",
+        "internal": "quark",
+        "regulator": "0"
+      }
+    ]
+  ]
+}

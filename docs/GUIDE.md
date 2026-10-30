@@ -1,7 +1,9 @@
 # User guide
 
 This guide builds the two-point flow figure of the quark–meson model step by step. It only uses
-the mouse and the palette; no LaTeX code is needed except for the text terms.
+the mouse and the palette; no LaTeX code is needed except for the text terms. The
+[tutorial](https://kkockler.github.io/frg_diagram_generator/tutorial.html) (source:
+[`tutorial.html`](../tutorial.html)) is a longer, illustrated version that also covers **Flow…**.
 
 ![Two-point flows](2pt_flow.png)
 

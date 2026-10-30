@@ -1,0 +1,17 @@
+{
+  "$schema": "../../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "rows": [
+    [
+      "\\partial_t\\Gamma^{(2)}_{\\pi} \\propto -\\frac{1}{2}",
+      { "diagram": "tadpole", "field": "pion" },
+      "+",
+      { "diagram": "bubble", "field": "pion", "lines": { "upper": "sigma" } },
+      "+",
+      { "diagram": "bubble", "field": "pion", "lines": { "lower": "sigma" } },
+      "-2",
+      { "diagram": "bubble", "field": "pion", "internal": "quark" }
+    ]
+  ]
+}

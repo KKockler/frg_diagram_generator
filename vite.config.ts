@@ -10,6 +10,10 @@ export default defineConfig({
   worker: { format: 'es' },
   // MathJax's version.js otherwise falls back to eval('require'), which breaks in the browser.
   define: { PACKAGE_VERSION: JSON.stringify('3.2.1') },
-  build: { chunkSizeWarningLimit: 3000 },
+  build: {
+    chunkSizeWarningLimit: 3000,
+    // The tutorial (linked from About) is a second page next to the editor.
+    rolldownOptions: { input: { main: 'index.html', tutorial: 'tutorial.html' } },
+  },
   test: { environment: 'node' },
 });

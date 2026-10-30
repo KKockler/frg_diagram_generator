@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="523pt" height="68.8pt" viewBox="-53 -61.5 523 68.8">
+  <metadata><frg:source xmlns:frg="https://frg-diagrams/ns">{
+ "format": "frg-diagram",
+ "version": 1,
+ "style": {
+  "name": "fQCD",
+  "lineWidth": 1,
+  "doubleSep": 3.2,
+  "arrowLength": 4,
+  "arrowWidth": 3.4,
+  "vertexRadius": 5,
+  "regulatorRadius": 5,
+  "loopRadius": 27,
+  "legLength": 37,
+  "gridSize": 5,
+  "vertexColor": "#b3b3b3",
+  "fontSize": 12,
+  "termSize": 14,
+  "rowGap": 10,
+  "colorMode": "color",
+  "arrowOutline": "#1a1a1a",
+  "regulatorFill": "#eecfff",
+  "regulatorStroke": "Black"
+ },
+ "fieldTypes": [
+  {
+   "id": "pion",
+   "name": "Pion",
+   "tex": "\\pi",
+   "line": "double",
+   "color": "#00a6fb",
+   "arrows": "opposite"
+  },
+  {
+   "id": "sigma",
+   "name": "Sigma",
+   "tex": "\\sigma",
+   "line": "double",
+   "color": "BrickRed",
+   "arrows": "opposite"
+  },
+  {
+   "id": "quark",
+   "name": "Quark",
+   "tex": "q",
+   "line": "single",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "gluon",
+   "name": "Gluon",
+   "tex": "A",
+   "line": "curly",
+   "color": "#ff4000",
+   "arrows": "none",
+   "params": {
+    "amplitude": 3.4,
+    "windingLength": 5
+   }
+  },
+  {
+   "id": "ghost",
+   "name": "Ghost",
+   "tex": "c",
+   "line": "dashed",
+   "color": "Black",
+   "arrows": "forward",
+   "params": {
+    "dash": 2.8,
+    "gap": 2.6
+   }
+  },
+  {
+   "id": "photon",
+   "name": "Photon",
+   "tex": "\\gamma",
+   "line": "wavy",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "scalar",
+   "name": "Scalar",
+   "tex": "\\phi",
+   "line": "single",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "aux",
+   "name": "Guide (dotted)",
+   "tex": "",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "none",
+   "params": {
+    "gap": 4
+   }
+  }
+ ],
+ "vertexTypes": [
+  {
+   "id": "fullVertex",
+   "name": "Full vertex",
+   "shape": "circle",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "squareVertex",
+   "name": "Square vertex",
+   "shape": "square",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "bareVertex",
+   "name": "Bare vertex",
+   "shape": "circle",
+   "scale": 0.5,
+   "fill": "Black",
+   "stroke": "none",
+   "strokeWidth": 0
+  },
+  {
+   "id": "blob",
+   "name": "Blob (Γ⁽ⁿ⁾)",
+   "shape": "circle",
+   "scale": 2.2,
+   "fill": "LightGray",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "hatched",
+   "name": "Hatched blob (1PI)",
+   "shape": "hatched",
+   "scale": 2,
+   "fill": "White",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  }
+ ],
+ "diagram": {
+  "nodes": [
+   {
+    "id": "nmvurn6uf13",
+    "kind": "fullVertex",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "nmvurn6uf16",
+    "kind": "external",
+    "x": -50.5,
+    "y": 6.184466335694134e-15
+   },
+   {
+    "id": "nmvurn6uf18",
+    "kind": "external",
+    "x": 50.5,
+    "y": 0
+   },
+   {
+    "id": "nmvurn6uf1b",
+    "kind": "fullVertex",
+    "x": 98.5,
+    "y": -26.15
+   },
+   {
+    "id": "nmvurn6uf1c",
+    "kind": "fullVertex",
+    "x": 152.5,
+    "y": -26.150000000000002
+   },
+   {
+    "id": "nmvurn6uf1g",
+    "kind": "external",
+    "x": 61.5,
+    "y": -26.149999999999995
+   },
+   {
+    "id": "nmvurn6uf1i",
+    "kind": "external",
+    "x": 189.5,
+    "y": -26.150000000000002
+   },
+   {
+    "id": "nmvurn6uf1l",
+    "kind": "fullVertex",
+    "x": 237.5,
+    "y": -26.15
+   },
+   {
+    "id": "nmvurn6uf1m",
+    "kind": "fullVertex",
+    "x": 291.5,
+    "y": -26.150000000000002
+   },
+   {
+    "id": "nmvurn6uf1q",
+    "kind": "external",
+    "x": 200.5,
+    "y": -26.149999999999995
+   },
+   {
+    "id": "nmvurn6uf1s",
+    "kind": "external",
+    "x": 328.5,
+    "y": -26.150000000000002
+   },
+   {
+    "id": "nmvurn6uf1v",
+    "kind": "fullVertex",
+    "x": 376.5,
+    "y": -26.15
+   },
+   {
+    "id": "nmvurn6uf1w",
+    "kind": "fullVertex",
+    "x": 430.5,
+    "y": -26.150000000000002
+   },
+   {
+    "id": "nmvurn6uf20",
+    "kind": "external",
+    "x": 339.5,
+    "y": -26.149999999999995
+   },
+   {
+    "id": "nmvurn6uf22",
+    "kind": "external",
+    "x": 467.5,
+    "y": -26.150000000000002
+   }
+  ],
+  "edges": [
+   {
+    "id": "emvurn6uf14",
+    "from": "nmvurn6uf13",
+    "to": "nmvurn6uf13",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn6uf15",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ],
+    "loop": {
+     "radius": 27,
+     "angle": -1.5707963267948966
+    }
+   },
+   {
+    "id": "emvurn6uf17",
+    "from": "nmvurn6uf16",
+    "to": "nmvurn6uf13",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf19",
+    "from": "nmvurn6uf13",
+    "to": "nmvurn6uf18",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1d",
+    "from": "nmvurn6uf1b",
+    "to": "nmvurn6uf1c",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn6uf1f",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emvurn6uf1e",
+    "from": "nmvurn6uf1c",
+    "to": "nmvurn6uf1b",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1h",
+    "from": "nmvurn6uf1g",
+    "to": "nmvurn6uf1b",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1j",
+    "from": "nmvurn6uf1c",
+    "to": "nmvurn6uf1i",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1n",
+    "from": "nmvurn6uf1l",
+    "to": "nmvurn6uf1m",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn6uf1p",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emvurn6uf1o",
+    "from": "nmvurn6uf1m",
+    "to": "nmvurn6uf1l",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1r",
+    "from": "nmvurn6uf1q",
+    "to": "nmvurn6uf1l",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1t",
+    "from": "nmvurn6uf1m",
+    "to": "nmvurn6uf1s",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf1x",
+    "from": "nmvurn6uf1v",
+    "to": "nmvurn6uf1w",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn6uf1z",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emvurn6uf1y",
+    "from": "nmvurn6uf1w",
+    "to": "nmvurn6uf1v",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf21",
+    "from": "nmvurn6uf20",
+    "to": "nmvurn6uf1v",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn6uf23",
+    "from": "nmvurn6uf1w",
+    "to": "nmvurn6uf22",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   }
+  ],
+  "labels": [],
+  "groups": [
+   {
+    "id": "gmvurn6uf1a",
+    "name": "Tadpole",
+    "members": [
+     "nmvurn6uf13",
+     "nmvurn6uf16",
+     "nmvurn6uf18",
+     "emvurn6uf14",
+     "emvurn6uf17",
+     "emvurn6uf19"
+    ]
+   },
+   {
+    "id": "gmvurn6uf1k",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmvurn6uf1b",
+     "nmvurn6uf1c",
+     "nmvurn6uf1g",
+     "nmvurn6uf1i",
+     "emvurn6uf1d",
+     "emvurn6uf1e",
+     "emvurn6uf1h",
+     "emvurn6uf1j"
+    ]
+   },
+   {
+    "id": "gmvurn6uf1u",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmvurn6uf1l",
+     "nmvurn6uf1m",
+     "nmvurn6uf1q",
+     "nmvurn6uf1s",
+     "emvurn6uf1n",
+     "emvurn6uf1o",
+     "emvurn6uf1r",
+     "emvurn6uf1t"
+    ]
+   },
+   {
+    "id": "gmvurn6uf24",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmvurn6uf1v",
+     "nmvurn6uf1w",
+     "nmvurn6uf20",
+     "nmvurn6uf22",
+     "emvurn6uf1x",
+     "emvurn6uf1y",
+     "emvurn6uf21",
+     "emvurn6uf23"
+    ]
+   }
+  ],
+  "regions": []
+ }
+}</frg:source></metadata>
+  <path d="M0 1.6C-15.795 1.6 -28.6 -11.205 -28.6 -27C-28.6 -42.795 -15.795 -55.6 0 -55.6C15.795 -55.6 28.6 -42.795 28.6 -27C28.6 -11.205 15.795 1.6 0 1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M0 -1.6C-14.028 -1.6 -25.4 -12.972 -25.4 -27C-25.4 -41.028 -14.028 -52.4 0 -52.4C14.028 -52.4 25.4 -41.028 25.4 -27C25.4 -12.972 14.028 -1.6 0 -1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-28.6 -29L-26.9 -25L-28.6 -26L-30.3 -25Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M28.6 -25L26.9 -29L28.6 -28L30.3 -29Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-25.4 -25L-27.1 -29L-25.4 -28L-23.7 -29Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M25.4 -29L27.1 -25L25.4 -26L23.7 -25Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M5 -54C5 -51.239 2.761 -49 0 -49C-2.761 -49 -5 -51.239 -5 -54C-5 -56.761 -2.761 -59 0 -59C2.761 -59 5 -56.761 5 -54Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M3.536 -50.464L-3.536 -57.536M-3.536 -50.464L3.536 -57.536" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-50.5 -1.6L0 -1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-50.5 1.6L0 1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-23.25 -1.6L-27.25 0.1L-26.25 -1.6L-27.25 -3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-27.25 1.6L-23.25 -0.1L-24.25 1.6L-23.25 3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M0 -1.6L50.5 -1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M0 1.6L50.5 1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M27.25 -1.6L23.25 0.1L24.25 -1.6L23.25 -3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M23.25 1.6L27.25 -0.1L26.25 1.6L27.25 3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M96.9 -26.15C96.9 -41.945 109.705 -54.75 125.5 -54.75C141.295 -54.75 154.1 -41.945 154.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M100.1 -26.15C100.1 -40.178 111.472 -51.55 125.5 -51.55C139.528 -51.55 150.9 -40.178 150.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M106.691 -47.787L105.065 -43.757L104.57 -45.666L102.66 -46.161Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M147.137 -44.959L143.107 -46.585L145.016 -47.08L145.511 -48.99Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M106.125 -42.696L107.752 -46.727L108.247 -44.818L110.156 -44.323Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M142.046 -45.525L146.077 -43.898L144.168 -43.403L143.673 -41.494Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M130.5 -53.15C130.5 -50.389 128.261 -48.15 125.5 -48.15C122.739 -48.15 120.5 -50.389 120.5 -53.15C120.5 -55.911 122.739 -58.15 125.5 -58.15C128.261 -58.15 130.5 -55.911 130.5 -53.15Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M129.036 -49.614L121.964 -56.686M121.964 -49.614L129.036 -56.686" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M154.1 -26.15C154.1 -10.355 141.295 2.45 125.5 2.45C109.705 2.45 96.9 -10.355 96.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M150.9 -26.15C150.9 -12.122 139.528 -0.75 125.5 -0.75C111.472 -0.75 100.1 -12.122 100.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M123.5 2.45L127.5 0.75L126.5 2.45L127.5 4.15Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M127.5 -0.75L123.5 0.95L124.5 -0.75L123.5 -2.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M61.5 -27.75L98.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M61.5 -24.55L98.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M82 -27.75L78 -26.05L79 -27.75L78 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M78 -24.55L82 -26.25L81 -24.55L82 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M152.5 -27.75L189.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M152.5 -24.55L189.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M173 -27.75L169 -26.05L170 -27.75L169 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M169 -24.55L173 -26.25L172 -24.55L173 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M235.9 -26.15C235.9 -41.945 248.705 -54.75 264.5 -54.75C280.295 -54.75 293.1 -41.945 293.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M239.1 -26.15C239.1 -40.178 250.472 -51.55 264.5 -51.55C278.528 -51.55 289.9 -40.178 289.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M245.691 -47.787L244.065 -43.757L243.57 -45.666L241.66 -46.161Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M286.137 -44.959L282.107 -46.585L284.016 -47.08L284.511 -48.99Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M245.125 -42.696L246.752 -46.727L247.247 -44.818L249.156 -44.323Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M281.046 -45.525L285.077 -43.898L283.168 -43.403L282.673 -41.494Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M269.5 -53.15C269.5 -50.389 267.261 -48.15 264.5 -48.15C261.739 -48.15 259.5 -50.389 259.5 -53.15C259.5 -55.911 261.739 -58.15 264.5 -58.15C267.261 -58.15 269.5 -55.911 269.5 -53.15Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M268.036 -49.614L260.964 -56.686M260.964 -49.614L268.036 -56.686" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M293.1 -26.15C293.1 -10.355 280.295 2.45 264.5 2.45C248.705 2.45 235.9 -10.355 235.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M289.9 -26.15C289.9 -12.122 278.528 -0.75 264.5 -0.75C250.472 -0.75 239.1 -12.122 239.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M262.5 2.45L266.5 0.75L265.5 2.45L266.5 4.15Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M266.5 -0.75L262.5 0.95L263.5 -0.75L262.5 -2.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M200.5 -27.75L237.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M200.5 -24.55L237.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M221 -27.75L217 -26.05L218 -27.75L217 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M217 -24.55L221 -26.25L220 -24.55L221 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M291.5 -27.75L328.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M291.5 -24.55L328.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M312 -27.75L308 -26.05L309 -27.75L308 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M308 -24.55L312 -26.25L311 -24.55L312 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M374.9 -26.15C374.9 -41.945 387.705 -54.75 403.5 -54.75C419.295 -54.75 432.1 -41.945 432.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M378.1 -26.15C378.1 -40.178 389.472 -51.55 403.5 -51.55C417.528 -51.55 428.9 -40.178 428.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M384.691 -47.787L383.065 -43.757L382.57 -45.666L380.66 -46.161Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M425.137 -44.959L421.107 -46.585L423.016 -47.08L423.511 -48.99Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M384.125 -42.696L385.752 -46.727L386.247 -44.818L388.156 -44.323Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M420.046 -45.525L424.077 -43.898L422.168 -43.403L421.673 -41.494Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M408.5 -53.15C408.5 -50.389 406.261 -48.15 403.5 -48.15C400.739 -48.15 398.5 -50.389 398.5 -53.15C398.5 -55.911 400.739 -58.15 403.5 -58.15C406.261 -58.15 408.5 -55.911 408.5 -53.15Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M407.036 -49.614L399.964 -56.686M399.964 -49.614L407.036 -56.686" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M432.1 -26.15C432.1 -10.355 419.295 2.45 403.5 2.45C387.705 2.45 374.9 -10.355 374.9 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M428.9 -26.15C428.9 -12.122 417.528 -0.75 403.5 -0.75C389.472 -0.75 378.1 -12.122 378.1 -26.15" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M401.5 2.45L405.5 0.75L404.5 2.45L405.5 4.15Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M405.5 -0.75L401.5 0.95L402.5 -0.75L401.5 -2.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M339.5 -27.75L376.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M339.5 -24.55L376.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M360 -27.75L356 -26.05L357 -27.75L356 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M356 -24.55L360 -26.25L359 -24.55L360 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M430.5 -27.75L467.5 -27.75" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M430.5 -24.55L467.5 -24.55" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M451 -27.75L447 -26.05L448 -27.75L447 -29.45Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M447 -24.55L451 -26.25L450 -24.55L451 -22.85Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M5 0C5 2.761 2.761 5 0 5C-2.761 5 -5 2.761 -5 0C-5 -2.761 -2.761 -5 0 -5C2.761 -5 5 -2.761 5 0Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M103.5 -26.15C103.5 -23.389 101.261 -21.15 98.5 -21.15C95.739 -21.15 93.5 -23.389 93.5 -26.15C93.5 -28.911 95.739 -31.15 98.5 -31.15C101.261 -31.15 103.5 -28.911 103.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M157.5 -26.15C157.5 -23.389 155.261 -21.15 152.5 -21.15C149.739 -21.15 147.5 -23.389 147.5 -26.15C147.5 -28.911 149.739 -31.15 152.5 -31.15C155.261 -31.15 157.5 -28.911 157.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M242.5 -26.15C242.5 -23.389 240.261 -21.15 237.5 -21.15C234.739 -21.15 232.5 -23.389 232.5 -26.15C232.5 -28.911 234.739 -31.15 237.5 -31.15C240.261 -31.15 242.5 -28.911 242.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M296.5 -26.15C296.5 -23.389 294.261 -21.15 291.5 -21.15C288.739 -21.15 286.5 -23.389 286.5 -26.15C286.5 -28.911 288.739 -31.15 291.5 -31.15C294.261 -31.15 296.5 -28.911 296.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M381.5 -26.15C381.5 -23.389 379.261 -21.15 376.5 -21.15C373.739 -21.15 371.5 -23.389 371.5 -26.15C371.5 -28.911 373.739 -31.15 376.5 -31.15C379.261 -31.15 381.5 -28.911 381.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M435.5 -26.15C435.5 -23.389 433.261 -21.15 430.5 -21.15C427.739 -21.15 425.5 -23.389 425.5 -26.15C425.5 -28.911 427.739 -31.15 430.5 -31.15C433.261 -31.15 435.5 -28.911 435.5 -26.15Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../frg-spec.schema.json",
+  "format": "frg-spec",
+  "version": 1,
+  "rows": [
+    [
+      { "diagram": "tadpole", "field": "pion" },
+      { "diagram": "bubble", "field": "pion", "lines": { "upper": "sigma" } },
+      { "diagram": "bubble", "field": "pion", "lines": { "lower": "sigma" } },
+      { "diagram": "bubble", "field": "pion", "internal": "quark" }
+    ]
+  ]
+}

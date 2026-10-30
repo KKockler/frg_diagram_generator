@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="292.892pt" height="67.1pt" viewBox="-66.5 -34.5 292.892 67.1">
+  <metadata><frg:source xmlns:frg="https://frg-diagrams/ns">{
+ "format": "frg-diagram",
+ "version": 1,
+ "style": {
+  "name": "fQCD",
+  "lineWidth": 1,
+  "doubleSep": 3.2,
+  "arrowLength": 4,
+  "arrowWidth": 3.4,
+  "vertexRadius": 5,
+  "regulatorRadius": 5,
+  "loopRadius": 27,
+  "legLength": 37,
+  "gridSize": 5,
+  "vertexColor": "#b3b3b3",
+  "fontSize": 12,
+  "termSize": 14,
+  "rowGap": 10,
+  "colorMode": "color",
+  "arrowOutline": "#1a1a1a",
+  "regulatorFill": "#eecfff",
+  "regulatorStroke": "Black"
+ },
+ "fieldTypes": [
+  {
+   "id": "pion",
+   "name": "Pion",
+   "tex": "\\pi",
+   "line": "double",
+   "color": "#00a6fb",
+   "arrows": "opposite"
+  },
+  {
+   "id": "sigma",
+   "name": "Sigma",
+   "tex": "\\sigma",
+   "line": "double",
+   "color": "BrickRed",
+   "arrows": "opposite"
+  },
+  {
+   "id": "quark",
+   "name": "Quark",
+   "tex": "q",
+   "line": "single",
+   "color": "Black",
+   "arrows": "forward"
+  },
+  {
+   "id": "gluon",
+   "name": "Gluon",
+   "tex": "A",
+   "line": "curly",
+   "color": "#ff4000",
+   "arrows": "none",
+   "params": {
+    "amplitude": 3.4,
+    "windingLength": 5
+   }
+  },
+  {
+   "id": "ghost",
+   "name": "Ghost",
+   "tex": "c",
+   "line": "dashed",
+   "color": "Black",
+   "arrows": "forward",
+   "params": {
+    "dash": 2.8,
+    "gap": 2.6
+   }
+  },
+  {
+   "id": "photon",
+   "name": "Photon",
+   "tex": "\\gamma",
+   "line": "wavy",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "scalar",
+   "name": "Scalar",
+   "tex": "\\phi",
+   "line": "single",
+   "color": "Black",
+   "arrows": "none"
+  },
+  {
+   "id": "aux",
+   "name": "Guide (dotted)",
+   "tex": "",
+   "line": "dotted",
+   "color": "Black",
+   "arrows": "none",
+   "params": {
+    "gap": 4
+   }
+  }
+ ],
+ "vertexTypes": [
+  {
+   "id": "fullVertex",
+   "name": "Full vertex",
+   "shape": "circle",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "squareVertex",
+   "name": "Square vertex",
+   "shape": "square",
+   "scale": 1,
+   "fill": "style",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "bareVertex",
+   "name": "Bare vertex",
+   "shape": "circle",
+   "scale": 0.5,
+   "fill": "Black",
+   "stroke": "none",
+   "strokeWidth": 0
+  },
+  {
+   "id": "blob",
+   "name": "Blob (Γ⁽ⁿ⁾)",
+   "shape": "circle",
+   "scale": 2.2,
+   "fill": "LightGray",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  },
+  {
+   "id": "hatched",
+   "name": "Hatched blob (1PI)",
+   "shape": "hatched",
+   "scale": 2,
+   "fill": "White",
+   "stroke": "Black",
+   "strokeWidth": 0.6
+  }
+ ],
+ "diagram": {
+  "nodes": [
+   {
+    "id": "nmvurn75jl",
+    "kind": "fullVertex",
+    "x": -27,
+    "y": 3.3065463576978537e-15
+   },
+   {
+    "id": "nmvurn75jm",
+    "kind": "fullVertex",
+    "x": 27,
+    "y": 0
+   },
+   {
+    "id": "nmvurn75jq",
+    "kind": "external",
+    "x": -64,
+    "y": 7.83773951454306e-15
+   },
+   {
+    "id": "nmvurn75js",
+    "kind": "external",
+    "x": 64,
+    "y": 0
+   },
+   {
+    "id": "nmvurn75kx",
+    "kind": "fullVertex",
+    "x": 132.892,
+    "y": -1.8999999999999952
+   },
+   {
+    "id": "nmvurn75ky",
+    "kind": "fullVertex",
+    "x": 186.892,
+    "y": -1.8999999999999986
+   },
+   {
+    "id": "nmvurn75k12",
+    "kind": "external",
+    "x": 95.892,
+    "y": -1.8999999999999908
+   },
+   {
+    "id": "nmvurn75k14",
+    "kind": "external",
+    "x": 223.892,
+    "y": -1.8999999999999986
+   }
+  ],
+  "edges": [
+   {
+    "id": "emvurn75jn",
+    "from": "nmvurn75jl",
+    "to": "nmvurn75jm",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn75kv",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emvurn75jo",
+    "from": "nmvurn75jm",
+    "to": "nmvurn75jl",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn75jr",
+    "from": "nmvurn75jq",
+    "to": "nmvurn75jl",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn75jt",
+    "from": "nmvurn75jm",
+    "to": "nmvurn75js",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn75kz",
+    "from": "nmvurn75kx",
+    "to": "nmvurn75ky",
+    "field": "sigma",
+    "bend": -27,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn75k10",
+    "from": "nmvurn75ky",
+    "to": "nmvurn75kx",
+    "field": "pion",
+    "bend": -27,
+    "reversed": false,
+    "insertions": [
+     {
+      "id": "imvurn75k17",
+      "kind": "regulator",
+      "t": 0.5
+     }
+    ]
+   },
+   {
+    "id": "emvurn75k13",
+    "from": "nmvurn75k12",
+    "to": "nmvurn75kx",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   },
+   {
+    "id": "emvurn75k15",
+    "from": "nmvurn75ky",
+    "to": "nmvurn75k14",
+    "field": "pion",
+    "bend": 0,
+    "reversed": false,
+    "insertions": []
+   }
+  ],
+  "labels": [
+   {
+    "id": "lmvurn75kw",
+    "x": 79.946,
+    "y": -0.9499999999999993,
+    "tex": "+"
+   }
+  ],
+  "groups": [
+   {
+    "id": "gmvurn75ju",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmvurn75jl",
+     "nmvurn75jm",
+     "nmvurn75jq",
+     "nmvurn75js",
+     "emvurn75jn",
+     "emvurn75jo",
+     "emvurn75jr",
+     "emvurn75jt"
+    ]
+   },
+   {
+    "id": "gmvurn75k16",
+    "name": "Polarisation / self-energy",
+    "members": [
+     "nmvurn75kx",
+     "nmvurn75ky",
+     "nmvurn75k12",
+     "nmvurn75k14",
+     "emvurn75kz",
+     "emvurn75k10",
+     "emvurn75k13",
+     "emvurn75k15"
+    ]
+   }
+  ],
+  "regions": []
+ }
+}</frg:source></metadata>
+  <path d="M-28.6 0C-28.6 -15.795 -15.795 -28.6 0 -28.6C15.795 -28.6 28.6 -15.795 28.6 0" fill="none" stroke="#b8140b" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-25.4 0C-25.4 -14.028 -14.028 -25.4 0 -25.4C14.028 -25.4 25.4 -14.028 25.4 0" fill="none" stroke="#b8140b" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-18.809 -21.637L-20.435 -17.607L-20.93 -19.516L-22.84 -20.011Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M21.637 -18.809L17.607 -20.435L19.516 -20.93L20.011 -22.84Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-19.375 -16.546L-17.748 -20.577L-17.253 -18.668L-15.344 -18.173Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M16.546 -19.375L20.577 -17.748L18.668 -17.253L18.173 -15.344Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M5 -27C5 -24.239 2.761 -22 0 -22C-2.761 -22 -5 -24.239 -5 -27C-5 -29.761 -2.761 -32 0 -32C2.761 -32 5 -29.761 5 -27Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M3.536 -23.464L-3.536 -30.536M-3.536 -23.464L3.536 -30.536" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M28.6 0C28.6 15.795 15.795 28.6 0 28.6C-15.795 28.6 -28.6 15.795 -28.6 0" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M25.4 0C25.4 14.028 14.028 25.4 0 25.4C-14.028 25.4 -25.4 14.028 -25.4 0" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-2 28.6L2 26.9L1 28.6L2 30.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M2 25.4L-2 27.1L-1 25.4L-2 23.7Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-64 -1.6L-27 -1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-64 1.6L-27 1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M-43.5 -1.6L-47.5 0.1L-46.5 -1.6L-47.5 -3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-47.5 1.6L-43.5 -0.1L-44.5 1.6L-43.5 3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M27 -1.6L64 -1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M27 1.6L64 1.6" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M47.5 -1.6L43.5 0.1L44.5 -1.6L43.5 -3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M43.5 1.6L47.5 -0.1L46.5 1.6L47.5 3.3Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M131.292 -1.9C131.292 -17.695 144.097 -30.5 159.892 -30.5C175.687 -30.5 188.492 -17.695 188.492 -1.9" fill="none" stroke="#b8140b" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M134.492 -1.9C134.492 -15.928 145.864 -27.3 159.892 -27.3C173.92 -27.3 185.292 -15.928 185.292 -1.9" fill="none" stroke="#b8140b" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M161.892 -30.5L157.892 -28.8L158.892 -30.5L157.892 -32.2Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M157.892 -27.3L161.892 -29L160.892 -27.3L161.892 -25.6Z" fill="#b8140b" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M188.492 -1.9C188.492 13.895 175.687 26.7 159.892 26.7C144.097 26.7 131.292 13.895 131.292 -1.9" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M185.292 -1.9C185.292 12.128 173.92 23.5 159.892 23.5C145.864 23.5 134.492 12.128 134.492 -1.9" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M178.701 19.737L180.327 15.707L180.822 17.616L182.732 18.111Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M138.255 16.909L142.285 18.535L140.376 19.03L139.881 20.94Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M179.267 14.646L177.64 18.677L177.145 16.768L175.236 16.273Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M143.346 17.475L139.315 15.848L141.224 15.353L141.719 13.444Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M164.892 25.1C164.892 27.861 162.653 30.1 159.892 30.1C157.131 30.1 154.892 27.861 154.892 25.1C154.892 22.339 157.131 20.1 159.892 20.1C162.653 20.1 164.892 22.339 164.892 25.1Z" fill="#eecfff" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M163.428 28.636L156.356 21.564M156.356 28.636L163.428 21.564" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M95.892 -3.5L132.892 -3.5" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M95.892 -0.3L132.892 -0.3" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M116.392 -3.5L112.392 -1.8L113.392 -3.5L112.392 -5.2Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M112.392 -0.3L116.392 -2L115.392 -0.3L116.392 1.4Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M186.892 -3.5L223.892 -3.5" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M186.892 -0.3L223.892 -0.3" fill="none" stroke="#00a6fb" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M207.392 -3.5L203.392 -1.8L204.392 -3.5L203.392 -5.2Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M203.392 -0.3L207.392 -2L206.392 -0.3L207.392 1.4Z" fill="#00a6fb" stroke="#1a1a1a" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M-22 0C-22 2.761 -24.239 5 -27 5C-29.761 5 -32 2.761 -32 0C-32 -2.761 -29.761 -5 -27 -5C-24.239 -5 -22 -2.761 -22 0Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M32 0C32 2.761 29.761 5 27 5C24.239 5 22 2.761 22 0C22 -2.761 24.239 -5 27 -5C29.761 -5 32 -2.761 32 0Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M137.892 -1.9C137.892 0.861 135.653 3.1 132.892 3.1C130.131 3.1 127.892 0.861 127.892 -1.9C127.892 -4.661 130.131 -6.9 132.892 -6.9C135.653 -6.9 137.892 -4.661 137.892 -1.9Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <path d="M191.892 -1.9C191.892 0.861 189.653 3.1 186.892 3.1C184.131 3.1 181.892 0.861 181.892 -1.9C181.892 -4.661 184.131 -6.9 186.892 -6.9C189.653 -6.9 191.892 -4.661 191.892 -1.9Z" fill="#b3b3b3" stroke="#000000" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <g transform="translate(74.5 2.557) scale(0.014)"><g stroke="#000000" fill="#000000" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g></g></g></g>
+</svg>

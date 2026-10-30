@@ -59,7 +59,7 @@ jobs:
       - run: npx vitest run src/flow/wasm.test.ts
       - run: |
           mkdir -p build/tikz
-          for f in examples/*.spec.json; do node dist-cli/frg.mjs build "$f" -o "build/tikz/spec_$(basename "$f" .spec.json).tex" || exit 1; done
+          for f in examples/*.spec.json docs/tutorial/*.spec.json; do node dist-cli/frg.mjs build "$f" -o "build/tikz/spec_$(basename "$f" .spec.json).tex" || exit 1; done
           for f in examples/*.flow.json; do node dist-cli/frg.mjs flow "$f" -o "build/tikz/flow_$(basename "$f" .flow.json).tex" || exit 1; done
       - uses: actions/upload-artifact@v4
         with: { name: cli, path: build/tikz, retention-days: 7 }

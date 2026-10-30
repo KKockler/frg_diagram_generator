@@ -8,8 +8,10 @@ export embeds its source, so **Open…** on an exported PDF/SVG/TeX file makes i
 
 ![Example: two-point flows built with the editor](docs/2pt_flow.png)
 
-Start with the [user guide](docs/GUIDE.md), which builds the figure above step by step. The editor
-runs at <https://kkockler.github.io/frg_diagram_generator/>.
+Start with the [tutorial](https://kkockler.github.io/frg_diagram_generator/tutorial.html) (also
+linked from **About…** in the editor; a shorter version is the [user guide](docs/GUIDE.md)), which
+builds the figure above step by step. The editor runs at
+<https://kkockler.github.io/frg_diagram_generator/>.
 
 ## How this was made
 

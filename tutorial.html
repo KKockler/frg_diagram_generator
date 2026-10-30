@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fRG Diagram Editor Tutorial</title>
+    <meta name="description" content="Step-by-step tutorial for the fRG diagram editor: build the two-point flows of the quark–meson model, export them for a paper, and generate whole flow equations with FunKit." />
+    <link rel="stylesheet" href="./src/tutorial/tutorial.css" />
+  </head>
+  <body>
+    <header class="top">
+      <strong>fRG Diagrams</strong>
+      <span>Tutorial</span>
+      <span class="grow"></span>
+      <a class="button primary" href="./" target="_blank" rel="noopener">Open the editor ↗</a>
+    </header>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#layout">The editor at a glance</a></li>
+          <li><a href="#place">Place the diagrams</a></li>
+          <li><a href="#swap">Swap lines and vertices</a></li>
+          <li><a href="#text">Add the text terms</a></li>
+          <li><a href="#arrange">Arrange the rows</a></li>
+          <li><a href="#sum">Sum over regulator positions</a></li>
+          <li><a href="#export">Export to your paper</a></li>
+          <li><a href="#style">Style sheet and types</a></li>
+          <li><a href="#flow">Whole flow equations</a></li>
+          <li><a href="#more">More tools</a></li>
+          <li><a href="#cli">Command line and AI assistants</a></li>
+        </ol>
+      </nav>
+
+      <main>
+        <h1>Tutorial</h1>
+        <p class="lead">
+          This tutorial builds the two-point flows of the quark–meson model below with the mouse, puts them into a LaTeX paper, and then lets
+          FunKit generate a complete flow equation. Keep the <a href="./" target="_blank" rel="noopener">editor</a> open in a second window and
+          follow along; it takes about ten minutes.
+        </p>
+        <figure>
+          <img src="./docs/tutorial/2pt_flow.svg" alt="Two-point flows of the pion, sigma and quark in the quark–meson model" />
+          <figcaption>
+            The goal. The finished file is in the editor under <span class="ui">Library…</span> → <em>Examples</em>.
+            <a class="dl" download="2pt_flow.svg">Download (.svg)</a>
+          </figcaption>
+        </figure>
+        <p class="hint">
+          Every figure on this page embeds its editable source: download it and use <span class="ui">Open…</span> in the editor to continue
+          from that step.
+        </p>
+
+        <section id="layout">
+          <h2><span class="n">1</span> The editor at a glance</h2>
+          <div class="mock" aria-hidden="true">
+            <div class="m-bar">Toolbar: New · Open… · Save · Undo · … · Lines &amp; vertices… · Library… · Flow… · About… · Export</div>
+            <div class="m-pal"><b>Palette</b>Tools<br />Lines<br />Vertices<br />Insertions<br />Diagrams</div>
+            <div class="m-stage"><b>Canvas</b>wheel: zoom<br /><kbd>0</kbd>: zoom to fit<br /><kbd>Space</kbd>-drag: pan</div>
+            <div class="m-insp"><b>Inspector</b>style sheet, or the properties of the selection</div>
+          </div>
+          <ul>
+            <li>
+              The <b>palette</b> on the left holds the <b>tools</b> (each with a one-key shortcut, shown on its button), the <b>line types</b>
+              (fields), the <b>vertex types</b>, the insertions (regulator ⊗ and friends) and the pre-built <b>diagrams</b>. A hint under the
+              tools says what the active tool does.
+            </li>
+            <li>
+              The <b>inspector</b> on the right shows what you have selected. With nothing selected it shows the document's style sheet and a list
+              of keyboard shortcuts.
+            </li>
+            <li>Everything snaps to the grid. Hold <kbd>Alt</kbd> to place freely, or untick <span class="ui">Snap</span> in the toolbar.</li>
+            <li>
+              The drawing is kept in this browser between visits, but only <span class="ui">Save</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) writes a
+              <code>.frg.json</code> file you can keep.
+            </li>
+          </ul>
+        </section>
+
+        <section id="place">
+          <h2><span class="n">2</span> Place the diagrams</h2>
+          <ol class="steps">
+            <li>Click <span class="ui">New</span> to start from an empty canvas (<span class="ui">Undo</span> brings the old drawing back).</li>
+            <li>In the palette, pick <span class="ui">Pion</span> under <em>Lines</em>, then <span class="ui">Tadpole</span> under <em>Diagrams</em>.</li>
+            <li>Click on the canvas. A complete tadpole appears: vertex, legs, loop and the regulator ⊗.</li>
+            <li>Pick <span class="ui">Polarisation / self-energy</span> and click three more times to the right of the tadpole.</li>
+          </ol>
+          <figure>
+            <img src="./docs/tutorial/place.svg" alt="A pion tadpole and three pion bubbles" />
+            <figcaption>After step 2. <a class="dl" download="place.svg">Download (.svg)</a></figcaption>
+          </figure>
+          <p>
+            Built-in diagrams use the active line type, and all of them have the same size, taken from the style sheet. Each placed diagram is a
+            <b>group</b>: one click selects the whole diagram, and dragging moves it as one unit, so its shape cannot be deformed by accident.
+            Double-click picks a single line or vertex inside a group.
+          </p>
+        </section>
+
+        <section id="swap">
+          <h2><span class="n">3</span> Swap lines and vertices</h2>
+          <p>The diagrams have the right shape, but every line is a pion. Repaint the internal lines with the drawing tools:</p>
+          <ol class="steps">
+            <li>
+              Choose the <span class="ui">Line</span> tool (<kbd>L</kbd>), pick <span class="ui">Sigma</span> in the palette, and click the
+              <b>upper</b> line of the second diagram. Only that line is repainted.
+            </li>
+            <li>Still with Sigma, click the <b>lower</b> line of the third diagram.</li>
+            <li>Pick <span class="ui">Quark</span> and click both lines of the fourth diagram.</li>
+          </ol>
+          <figure>
+            <img src="./docs/tutorial/swap.svg" alt="The tadpole, a bubble with an upper sigma line, one with a lower sigma line, and a quark loop" />
+            <figcaption>After step 3. <a class="dl" download="swap.svg">Download (.svg)</a></figcaption>
+          </figure>
+          <ul>
+            <li><b>Many lines at once:</b> select a whole diagram (Select tool, <kbd>V</kbd>) and click a field in the palette. All its lines change.</li>
+            <li><b>Regulator:</b> in Select mode, drag the ⊗ onto another line to move it there.</li>
+            <li>
+              <b>Vertices:</b> the <span class="ui">Vertex</span> tool (<kbd>P</kbd>) with a vertex type picked in the palette (for example
+              <em>Bare vertex</em> or <em>Hatched blob</em>) changes the vertex you click.
+            </li>
+            <li><b>Arrows:</b> <kbd>F</kbd> reverses the arrows of the selected lines, for example a fermion loop running the other way.</li>
+          </ul>
+        </section>
+
+        <section id="text">
+          <h2><span class="n">4</span> Add the text terms</h2>
+          <p>The <span class="ui">Text</span> tool (<kbd>T</kbd>) places TeX, already in math mode:</p>
+          <ol class="steps">
+            <li>
+              Click empty space to the left of the tadpole. In the inspector, type
+              <code>\partial_t\Gamma^{(2)}_\pi \propto -\frac12</code> and press <kbd>Enter</kbd>.
+            </li>
+            <li>Click between the diagrams and type <code>+</code>, <code>+</code> and <code>-2</code>.</li>
+          </ol>
+          <p>
+            Clicking a <b>line or vertex</b> with the Text tool attaches a label instead. It defaults to the field's symbol (π, σ, q, …) and moves
+            with its line. The text is typeset with MathJax on screen and by your paper's LaTeX in the TikZ export.
+          </p>
+        </section>
+
+        <section id="arrange">
+          <h2><span class="n">5</span> Arrange the rows</h2>
+          <p>
+            Select the terms and diagrams of the row (drag a rubber band around them, or <kbd>Ctrl</kbd>+<kbd>A</kbd>) and press <kbd>A</kbd>
+            (<span class="ui">Arrange row</span>). They are placed left to right with equal gaps, on the centre line of the leftmost item.
+          </p>
+          <figure>
+            <img src="./docs/tutorial/row.svg" alt="The arranged pion row of the flow equation" />
+            <figcaption>The arranged pion row. <a class="dl" download="row.svg">Download (.svg)</a></figcaption>
+          </figure>
+          <p>
+            For the sigma and quark rows, select the pion row, duplicate it (<kbd>Ctrl</kbd>+<kbd>D</kbd>), move the copy down and repaint it as
+            in step 3. Then select all rows and use <span class="ui">⇤ left</span> under <em>Arrange</em> in the inspector to align their left
+            edges. <span class="ui">Group</span> (<kbd>Ctrl</kbd>+<kbd>G</kbd>) keeps a finished row together.
+          </p>
+        </section>
+
+        <section id="sum">
+          <h2><span class="n">6</span> Sum over regulator positions</h2>
+          <p>
+            The flow of a diagram has the regulator insertion ∂<sub>t</sub>R on each internal line in turn. Select a diagram and click
+            <span class="ui">⊗ on each line → sum</span> in the inspector: the diagram is replaced by copies with the ⊗ on each internal line,
+            joined by <code>+</code>.
+          </p>
+          <figure>
+            <img src="./docs/tutorial/sum.svg" alt="A bubble written as the sum of two terms, with the regulator on the upper and on the lower line" />
+            <figcaption>⊗ on each line → sum, applied to the bubble with the upper σ line. <a class="dl" download="sum.svg">Download (.svg)</a></figcaption>
+          </figure>
+        </section>
+
+        <section id="export">
+          <h2><span class="n">7</span> Export to your paper</h2>
+          <p>The export buttons are on the right of the toolbar. Tick <span class="ui">Selection only</span> to export just the selected part.</p>
+          <dl>
+            <dt><span class="ui">Export PDF</span></dt>
+            <dd>A vector PDF with TeX fonts, cropped tightly. Include it with <code>\includegraphics</code>.</dd>
+            <dt><span class="ui">TikZ</span> / <span class="ui">Copy TikZ</span></dt>
+            <dd>
+              The same drawing as a standalone <code>.tex</code> file, or as a <code>tikzpicture</code> on the clipboard to paste into the paper.
+              The labels are then typeset by your paper's LaTeX, in its fonts and macros.
+            </dd>
+            <dt><span class="ui">SVG</span></dt>
+            <dd>For slides and the web.</dd>
+          </dl>
+          <p>
+            Every export embeds the editable source. <span class="ui">Open…</span> on an exported PDF, SVG or <code>.tex</code> file brings the
+            diagram back, so a figure in a paper can be edited months later without hunting for the original. Scale and margin of the export are
+            set in the inspector (nothing selected).
+          </p>
+        </section>
+
+        <section id="style">
+          <h2><span class="n">8</span> Style sheet and types</h2>
+          <ul>
+            <li>
+              <b>Style sheet:</b> with nothing selected, the inspector shows the document's style: line width, double-line spacing, arrow, vertex
+              and ⊗ sizes, loop radius and label sizes. All diagrams share it, so they stay consistent. <em>Preset</em> switches the whole document,
+              e.g. to <em>Journal (black &amp; white)</em>, <em>Grayscale</em> or <em>Talk (bold)</em>.
+            </li>
+            <li>
+              <b><span class="ui">Lines &amp; vertices…</span></b> edits the types themselves: line style, arrows, colour and TeX symbol of each
+              field, and shape, size, fill, outline and inner text of each vertex type. Add your own fields there (a diquark, a vector
+              meson, …). Changes apply to everything of that type.
+            </li>
+            <li>
+              <b><span class="ui">Library…</span></b> holds the group library, the examples and your own templates. Select a diagram and use
+              <span class="ui">Save as template</span> in the inspector; it then appears under <em>Diagrams</em> in the palette.
+              <em>Export my library</em> shares templates and field types with colleagues.
+            </li>
+          </ul>
+        </section>
+
+        <section id="flow">
+          <h2><span class="n">9</span> Whole flow equations</h2>
+          <p>
+            For a complete flow you don't need to draw anything. <span class="ui">Flow…</span> in the toolbar computes the full one-loop flow
+            ∂<sub>t</sub>Γ<sup>(n)</sup> of an n-point function from the Wetterich equation, with every diagram and its prefactor, using
+            <a href="https://github.com/satfra/FunKit" target="_blank" rel="noreferrer">FunKit</a> by F. R. Sattler, which runs in your browser.
+          </p>
+          <ol class="steps">
+            <li>Open <span class="ui">Flow…</span> and choose <em>Quark-meson model: pion 2-point function</em> under <em>Example</em>.</li>
+            <li>
+              Under <em>Field content</em>, the ticked line types are the fields: Sigma, Pion and Quark, with the quark marked <em>charged</em>
+              and <em>fermion</em>.
+            </li>
+            <li>Under <em>External legs</em> there are two pions. Add or remove legs with the buttons below.</li>
+            <li>
+              Click <span class="ui">Compute and insert</span>. The equation is added below your drawing, drawn in your style and ready to edit.
+            </li>
+          </ol>
+          <figure>
+            <img src="./docs/tutorial/flow.svg" alt="The full one-loop flow of the pion two-point function in the quark–meson model" />
+            <figcaption>
+              The result, with the maximal truncation (every vertex that conserves the charges).
+              <a class="dl" download="flow.svg">Download (.svg)</a>
+            </figcaption>
+          </figure>
+          <ul>
+            <li>
+              <b>Restrict the vertices</b> lists the vertices to keep, one per line (e.g. <code>sigma pion pion</code>; the dialog lists the names), for a smaller truncation.
+            </li>
+            <li>
+              <b>Regulator</b> chooses between ⊗ on each line (one term per regulator position) and <span class="tilde">∂</span><sub>t</sub> in
+              front of the diagrams without regulator.
+            </li>
+            <li>
+              If you use generated flow equations in your work, please cite FunKit: F. R. Sattler,
+              <a href="https://arxiv.org/abs/2605.28935" target="_blank" rel="noreferrer">arXiv:2605.28935</a> (2026).
+            </li>
+          </ul>
+        </section>
+
+        <section id="more">
+          <h2><span class="n">10</span> More tools</h2>
+          <dl>
+            <dt>Drawing from scratch</dt>
+            <dd>
+              The <span class="ui">Vertex</span> tool (<kbd>P</kbd>) places vertices and splits a line you click. The <span class="ui">Line</span>
+              tool draws a propagator when you drag from a vertex or from empty space; clicking a vertex adds a self-loop. Drop a line's endpoint
+              onto a vertex to connect it. In Select mode, drag the ◇ handle of a line to bend it.
+            </dd>
+            <dt>Changing a pre-built diagram's shape</dt>
+            <dd>Select it and click <span class="ui">Ungroup (edit geometry)</span> in the inspector.</dd>
+            <dt>Insertions</dt>
+            <dd>
+              The <span class="ui">Insert</span> tool (<kbd>R</kbd>) puts the insertion picked in the palette on the line you click: the regulator
+              ∂<sub>t</sub>R (⊗), the flowing-field regulator, a dressed-propagator blob or a mass-insertion cross.
+            </dd>
+            <dt>Momentum arrows</dt>
+            <dd>Select a single line (double-click inside a group) and tick <em>Momentum arrow</em> in the inspector.</dd>
+            <dt>Boxes</dt>
+            <dd>
+              The <span class="ui">Box</span> tool (<kbd>B</kbd>) draws shaded boxes or ellipses behind a diagram, e.g. to mark a resummed part.
+              The inspector sets fill, opacity, outline and corner radius.
+            </dd>
+            <dt>Arranging</dt>
+            <dd>
+              With several items selected, the inspector aligns edges or centres and distributes them evenly. <kbd>[</kbd> and <kbd>]</kbd> rotate
+              by 15° (with <kbd>Shift</kbd>: 90°), and the arrow keys nudge.
+            </dd>
+          </dl>
+        </section>
+
+        <section id="cli">
+          <h2><span class="n">11</span> Command line and AI assistants</h2>
+          <p>
+            The same figures can be built without the browser. The <code>frg</code> command (<a href="./frg.mjs">frg.mjs</a>, a single file that
+            needs Node ≥ 20) turns a JSON <b>figure spec</b>, rows of TeX terms and pre-built diagrams with no coordinates, into TikZ, PDF, SVG, PNG
+            or an editable <code>.frg.json</code>. The pion row above is this spec:
+          </p>
+          <pre><code>{
+  "format": "frg-spec",
+  "version": 1,
+  "rows": [[
+    "\\partial_t\\Gamma^{(2)}_{\\pi} \\propto -\\frac{1}{2}",
+    { "diagram": "tadpole", "field": "pion" }, "+",
+    { "diagram": "bubble", "field": "pion", "lines": { "upper": "sigma" } }, "+",
+    { "diagram": "bubble", "field": "pion", "lines": { "lower": "sigma" } }, "-2",
+    { "diagram": "bubble", "field": "pion", "internal": "quark" }
+  ]]
+}</code></pre>
+          <pre><code>node frg.mjs build row.json -o row.pdf -o row.frg.json</code></pre>
+          <p>
+            <code>frg flow</code> does what <span class="ui">Flow…</span> does. <span class="ui">Open…</span> in the editor also accepts specs.
+            AI assistants such as Claude can write the specs for you: point them to <a href="./llms.txt">llms.txt</a>. The full reference is
+            <a href="./SPEC.md">SPEC.md</a>.
+          </p>
+        </section>
+
+        <footer>
+          <a href="./">Back to the editor</a> · Source on <a href="https://github.com/KKockler/frg_diagram_generator">GitHub</a>
+        </footer>
+      </main>
+    </div>
+    <script>
+      // Download links get their URL from the image in the same figure (Vite hashes the asset names).
+      for (const a of document.querySelectorAll('figure a.dl')) a.href = a.closest('figure').querySelector('img').src;
+    </script>
+  </body>
+</html>
